@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.influx.marcus.theatres.utils.CustomScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/svParent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <LinearLayout
+        android:id="@+id/llParentShowLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!--this is top layout with movie details brief-->
+        <RelativeLayout
+            android:id="@+id/rlMovieTop"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200sdp">
+
+            <ImageView
+                android:id="@+id/ivTheatre"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_160sdp"
+                android:visibility="gone"
+                android:scaleType="centerCrop" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_160sdp"
+                android:gravity="center">
+
+                <com.wang.avi.AVLoadingIndicatorView
+                    android:id="@+id/loader"
+                    style="@style/AVLoadingIndicatorView"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="8dp"
+                    android:visibility="visible"
+                    app:indicatorColor="@color/marcus_red"
+                    app:indicatorName="LineSpinFadeLoaderIndicator" />
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:src="@drawable/circle_back" />
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/black">
+
+                <ImageView
+                    android:id="@+id/location"
+                    android:layout_width="30dp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:src="@drawable/location" />
+
+
+                <TextView
+                    android:id="@+id/tvMovieTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginLeft="8dp"
+                    android:fontFamily="@font/gotham_bold"
+                    android:gravity="center_vertical"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toStartOf="@id/ivInfoMovieDetail"
+                    app:layout_constraintStart_toEndOf="@id/location"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/ivInfoMovieDetail"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_margin="8dp"
+                    android:padding="8dp"
+                    android:src="@drawable/info"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvCloseText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:text="@string/close"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:visibility="gone"
+                    android:fontFamily="@font/gotham_book"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <View
+                    android:id="@+id/viewLineCloseText"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    app:layout_constraintLeft_toLeftOf="@id/tvCloseText"
+                    app:layout_constraintRight_toRightOf="@id/tvCloseText"
+                    app:layout_constraintTop_toBottomOf="@id/tvCloseText"
+                    app:layout_constraintVertical_bias="0.0" />
+            </android.support.constraint.ConstraintLayout>
+        </RelativeLayout>
+        <!--this is movie detail  layout with movie details cast,crew,synopsis etc-->
+        <RelativeLayout
+            android:id="@+id/llMovieDetail"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_350sdp"
+            android:background="@color/black"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <WebView
+                android:id="@+id/webview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <!--<com.ncrcinema.movietime.marcus.utils.CustomScrollView
+                android:id="@+id/svTheatreDetail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_350sdp">
+
+                <WebView
+                    android:id="@+id/webview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </com.ncrcinema.movietime.marcus.utils.CustomScrollView>-->
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/llSpace"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:background="@color/black"
+            android:visibility="gone"
+            android:orientation="vertical" />
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/searchLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:background="@color/marcus_red">
+
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpagerDate"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/ivRight"
+                app:layout_constraintStart_toEndOf="@+id/ivLeft" />
+
+
+            <View
+                android:id="@+id/vredgradientl"
+                android:layout_width="@dimen/_55sdp"
+                android:layout_height="50dp"
+                android:background="@drawable/red_gradient_left"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivLeft"
+                app:layout_constraintTop_toTopOf="@+id/viewpagerDate" />
+
+            <View
+                android:id="@+id/vredgradientr"
+                android:layout_width="@dimen/_63sdp"
+                android:layout_height="50dp"
+                android:background="@drawable/red_gradient_right"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/ivRight"
+                app:layout_constraintTop_toTopOf="@+id/viewpagerDate" />
+
+            <ImageView
+                android:id="@+id/ivLeft"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:fitsSystemWindows="true"
+                android:padding="15dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/leftarrow"
+                app:layout_constraintBottom_toBottomOf="@id/viewpagerDate"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/viewpagerDate" />
+
+            <ImageView
+                android:id="@+id/ivRight"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:fitsSystemWindows="true"
+                android:padding="15dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/rightarrow"
+                app:layout_constraintBottom_toBottomOf="@id/viewpagerDate"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/viewpagerDate" />
+        </android.support.constraint.ConstraintLayout>
+        <!--No showtimes layout-->
+        <TextView
+            android:id="@+id/tvNoShowtimes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_45sdp"
+            android:fontFamily="@font/gotham_bold"
+            android:text="@string/no_showtimes_available"
+            android:textColor="@color/marcus_red"
+            android:textSize="18sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/llShowtimesHolder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible"/>
+    </LinearLayout>
+</com.influx.marcus.theatres.utils.CustomScrollView>
+

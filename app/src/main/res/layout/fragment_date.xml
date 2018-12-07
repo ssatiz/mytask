@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black"
+    android:padding="10dp"
+    tools:context=".moviefilter.DateFragment">
+
+    <EditText
+        android:id="@+id/editDOB"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@null"
+        android:cursorVisible="false"
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="@font/gotham_book"
+        android:hint="@string/mm_dd_yyyy"
+        android:imeOptions="actionDone"
+        android:inputType="none"
+        android:focusable="false"
+        android:textColor="@color/white_light"
+        android:textColorHint="@color/white_light"
+        android:textIsSelectable="true"
+        android:textSize="14sp"
+        android:editable="false"
+        />
+
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="16sp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/calendar_icon"
+        android:tint="@color/white_light"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/grey_xlight"
+        app:layout_constraintTop_toBottomOf="@+id/editDOB"/>
+
+</android.support.constraint.ConstraintLayout>

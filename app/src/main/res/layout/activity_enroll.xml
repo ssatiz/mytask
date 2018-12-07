@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:descendantFocusability="beforeDescendants"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context="com.influx.marcus.theatres.forgotpassword.ForgotPasswordScreen">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:fontFamily="@font/gotham_bold"
+        android:gravity="center"
+        android:text="@string/enroll_your_card"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTime"
+        tools:ignore="MissingConstraints" />
+
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:padding="@dimen/_8sdp"
+        android:src="@drawable/backarrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTime"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tvEnroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/gotham_book"
+        android:text="@string/enroll_reward_description"
+        android:textColor="@color/grey_xlight"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/inputCardNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/white_light"
+        android:hint="@string/enter_your_card_number"
+        android:textColorHint="@color/white_light"
+        app:hintEnabled="true"
+        app:layout_constraintTop_toBottomOf="@+id/tvEnroll">
+
+        <EditText
+            android:id="@+id/etCardNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/grey_xlight"
+            android:fontFamily="@font/gotham_book"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:text=""
+            android:textColor="@color/white"
+            android:textColorHint="@color/grey_xlight"
+            android:textSize="14sp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/inputEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/white_light"
+        android:hint="@string/email_or_last_name"
+        android:textColorHint="@color/white_light"
+        app:hintEnabled="true"
+        app:layout_constraintTop_toBottomOf="@+id/inputCardNo">
+
+        <EditText
+            android:id="@+id/etEmailid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/grey_xlight"
+            android:fontFamily="@font/gotham_book"
+            android:imeOptions="actionDone"
+            android:text=""
+            android:textColor="@color/white"
+            android:textColorHint="@color/grey_xlight"
+            android:textSize="14sp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/btAddCard"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/marcus_red"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/inputEmail">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gotham_bold"
+            android:text="@string/add_card"
+            android:textColor="@color/white_light"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

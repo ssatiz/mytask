@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:descendantFocusability="beforeDescendants"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:padding="20dp"
+    tools:context="com.influx.marcus.theatres.login.LoginScreen">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/backarrow" />
+
+            <TextView
+                android:id="@+id/tvJoin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/gotham_bold"
+                android:gravity="center"
+                android:text="@string/reg"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/ivBack" />
+
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:fontFamily="@font/gotham_book"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/white_light"
+                android:hint="@string/first_name"
+                android:textColorHint="@color/white_light"
+                app:hintEnabled="true"
+                app:layout_constraintTop_toBottomOf="@+id/tvJoin">
+
+                <EditText
+                    android:id="@+id/editFirstName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white_light"
+                    android:fontFamily="@font/gotham_book"
+                    android:imeOptions="actionDone"
+                    android:inputType="textCapSentences"
+                    android:singleLine="true"
+                    android:textColor="@color/white_light"
+                    android:textColorHint="@color/white_light"
+                    android:textSize="14sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputlastname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/white_light"
+                android:hint="@string/last_name"
+                android:textColorHint="@color/white_light"
+                app:hintEnabled="true"
+                app:layout_constraintTop_toBottomOf="@+id/inputFirstName">
+
+                <EditText
+                    android:id="@+id/etLastName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white_light"
+                    android:fontFamily="@font/gotham_book"
+                    android:imeOptions="actionDone"
+                    android:singleLine="true"
+                    android:text=""
+                    android:inputType="textCapSentences"
+                    android:textColor="@color/white_light"
+                    android:textColorHint="@color/white_light"
+                    android:textSize="14sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/white_light"
+                android:hint="@string/email"
+                android:textColorHint="@color/white_light"
+                app:hintEnabled="true"
+                app:layout_constraintTop_toBottomOf="@+id/inputlastname">
+
+                <EditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white_light"
+                    android:fontFamily="@font/gotham_book"
+                    android:imeOptions="actionDone"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/white_light"
+                    android:textColorHint="@color/white_light"
+                    android:textSize="14sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputPasswd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/white_light"
+                android:hint="@string/password"
+                android:textColorHint="@color/white_light"
+                app:hintEnabled="true"
+                app:layout_constraintTop_toBottomOf="@+id/inputEmail"
+                app:passwordToggleDrawable="@drawable/pass_toggle"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/white">
+
+                <EditText
+                    android:id="@+id/editPasswrd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white_light"
+                    android:fontFamily="@font/gotham_book"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/white_light"
+                    android:textColorHint="@color/white_light"
+                    android:textSize="14sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputPhNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/white_light"
+                android:hint="@string/mobile_number"
+                android:textColorHint="@color/white_light"
+                app:hintEnabled="true"
+                app:layout_constraintTop_toBottomOf="@+id/inputPasswd">
+
+                <EditText
+                    android:id="@+id/etPhNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white_light"
+                    android:fontFamily="@font/gotham_book"
+                    android:imeOptions="actionDone"
+                    android:inputType="phone"
+                    android:maxLength="12"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/white_light"
+                    android:textColorHint="@color/white_light"
+                    android:textSize="14sp" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <CheckBox
+                android:id="@+id/cbRegister"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="16dp"
+                android:buttonTint="@color/grey_xlight"
+                app:layout_constraintTop_toBottomOf="@+id/inputPhNo" />
+
+
+            <TextView
+                android:id="@+id/tvRegister"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="@dimen/_8sdp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/gotham_bold"
+                android:gravity="center_vertical"
+                android:text="@string/register"
+                android:textColor="@color/white_light"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/cbRegister"
+                app:layout_constraintTop_toBottomOf="@+id/inputPhNo" />
+
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/clMagicalLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/tvRegister">
+
+                <TextView
+                    android:id="@+id/tvGender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gotham_bold"
+                    android:text="@string/gender"
+                    android:textColor="@color/white_light"
+                    android:textSize="14sp" />
+
+                <RadioGroup
+                    android:id="@+id/rbGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/tvGender">
+
+                    <RadioButton
+                        android:id="@+id/rbMale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/radio_button_checkbox_selector"
+                        android:drawablePadding="8dp"
+                        android:fontFamily="@font/gotham_book"
+                        android:text="@string/male"
+                        android:textColor="@color/white_light"
+                        android:textSize="14sp" />
+
+                    <RadioButton
+                        android:id="@+id/rbFemale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/radio_button_checkbox_selector"
+                        android:drawablePadding="8dp"
+                        android:fontFamily="@font/gotham_book"
+                        android:text="@string/female"
+                        android:textColor="@color/white_light"
+                        android:textSize="14sp"
+                        app:layout_constraintLeft_toRightOf="@+id/rbMale" />
+
+                    <RadioButton
+                        android:id="@+id/rbOthers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/radio_button_checkbox_selector"
+                        android:drawablePadding="8dp"
+                        android:fontFamily="@font/gotham_book"
+                        android:text="@string/others"
+                        android:textColor="@color/white_light"
+                        android:textSize="14sp"
+                        app:layout_constraintLeft_toRightOf="@+id/rbFemale" />
+                </RadioGroup>
+
+
+                <TextView
+                    android:id="@+id/editDOB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@null"
+                    android:cursorVisible="false"
+                    android:fontFamily="@font/gotham_book"
+                    android:hint="@string/mm_dd_yy"
+                    android:imeOptions="actionNext"
+                    android:inputType="none"
+                    android:textColor="@color/white_light"
+                    android:textColorHint="@color/white_light"
+                    android:textIsSelectable="true"
+                    android:textSize="14sp"
+                    app:layout_constraintTop_toBottomOf="@+id/rbGroup" />
+
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginBottom="@dimen/_22sdp"
+                    android:layout_marginEnd="16sp"
+                    android:layout_marginTop="14dp"
+                    android:src="@drawable/calendar_icon"
+                    android:tint="@color/white_light"
+                    app:layout_constraintBottom_toTopOf="@+id/inputAddress"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rbGroup"
+
+                    />
+                <View
+                    android:id="@+id/viewDOB"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="4dp"
+                    app:layout_constraintTop_toBottomOf="@+id/editDOB"
+                    android:background="@color/white_light"/>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/inputAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:backgroundTint="@color/white_light"
+                    android:hint="@string/address"
+                    android:textColorHint="@color/white_light"
+                    app:hintEnabled="true"
+                    app:layout_constraintTop_toBottomOf="@+id/editDOB">
+
+                    <EditText
+                        android:id="@+id/editAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/white_light"
+                        android:fontFamily="@font/gotham_book"
+                        android:imeOptions="actionDone"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/white_light"
+                        android:textColorHint="@color/white_light"
+                        android:textSize="14sp" />
+                </android.support.design.widget.TextInputLayout>
+
+                <com.influx.marcus.theatres.utils.InstantAutoComplete
+                    android:id="@+id/editState"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    app:layout_constraintTop_toBottomOf="@+id/inputAddress"
+                    android:fontFamily="@font/gotham_book"
+                    android:hint="@string/state"
+                    android:gravity="bottom"
+                    android:background="@null"
+                    android:inputType="textCapWords"
+                    android:imeOptions="actionNext"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/white_light"
+                    android:textColorHint="@color/white_light"
+                    android:textSize="14sp" />
+                <View
+                    android:id="@+id/viewState"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="4dp"
+                    app:layout_constraintTop_toBottomOf="@+id/editState"
+                    android:background="@color/white_light"/>
+
+                <com.influx.marcus.theatres.utils.InstantAutoComplete
+                    android:id="@+id/editCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="@string/city"
+                    android:background="@null"
+                    android:gravity="bottom"
+                    android:inputType="textCapWords"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintTop_toBottomOf="@+id/viewState"
+                    android:fontFamily="@font/gotham_book"
+                    android:imeOptions="actionNext"
+                    android:textColor="@color/white_light"
+                    android:textColorHint="@color/white_light"
+                    android:textSize="14sp" />
+                <View
+                    android:id="@+id/viewCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="4dp"
+                    app:layout_constraintTop_toBottomOf="@+id/editCity"
+                    android:background="@color/white_light"/>
+
+
+
+                <com.influx.marcus.theatres.utils.InstantAutoComplete
+                    android:id="@+id/editZipcode"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="bottom"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/gotham_book"
+                    android:imeOptions="actionNext"
+                    android:hint="@string/zip_code"
+                    android:background="@null"
+                    android:inputType="none"
+                    app:layout_constraintTop_toBottomOf="@+id/viewCity"
+                    android:textColor="@color/white_light"
+                    android:textColorHint="@color/white_light"
+                    android:textSize="14sp" />
+                <View
+                    android:id="@+id/viewZip"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="4dp"
+                    app:layout_constraintTop_toBottomOf="@+id/editZipcode"
+                    android:background="@color/white_light"/>
+            </android.support.constraint.ConstraintLayout>
+
+
+            <CheckBox
+                android:id="@+id/cbTerms"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="16dp"
+                android:buttonTint="@color/grey_xlight"
+                app:layout_constraintTop_toBottomOf="@+id/clMagicalLayout" />
+
+            <TextView
+                android:id="@+id/tvterms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/gotham_book"
+                android:gravity="center_vertical"
+                android:text="@string/i_agree"
+                android:textColor="@color/white_light"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@id/cbTerms"
+                app:layout_constraintTop_toBottomOf="@+id/clMagicalLayout" />
+
+            <TextView
+                android:id="@+id/tvTerms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/gotham_book"
+                android:gravity="center"
+                android:text="@string/terms_and_conditions"
+                android:textColor="@color/marcus_red"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toRightOf="@+id/tvterms"
+                app:layout_constraintTop_toBottomOf="@+id/clMagicalLayout" />
+
+            <TextView
+                android:id="@+id/tvThe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:fontFamily="@font/gotham_book"
+                android:gravity="center_vertical"
+                android:text="and "
+                android:textColor="@color/white_light"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTerms" />
+
+            <TextView
+                android:id="@+id/tvPrivacy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/gotham_book"
+                android:gravity="center_vertical"
+                android:text="@string/privacy_policy"
+                android:textColor="@color/marcus_red"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@id/tvThe"
+                app:layout_constraintTop_toBottomOf="@+id/tvTerms" />
+
+            <CheckBox
+                android:id="@+id/cbNews"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:checked="true"
+                android:layout_marginTop="16dp"
+                android:buttonTint="@color/grey_xlight"
+                app:layout_constraintTop_toBottomOf="@+id/tvThe" />
+            <TextView
+                android:id="@+id/tvNews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/gotham_book"
+                android:gravity="center_vertical"
+                android:text="@string/notification"
+                android:textColor="@color/white_light"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@id/cbNews"
+                app:layout_constraintTop_toBottomOf="@+id/tvThe" />
+
+            <Button
+                android:id="@+id/btnSignup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@color/marcus_red"
+                android:fontFamily="@font/gotham_bold"
+                android:paddingBottom="@dimen/_8sdp"
+                android:paddingTop="@dimen/_8sdp"
+                android:text="@string/sign_up"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp"
+                android:textAllCaps="false"
+                app:layout_constraintStart_toStartOf="@id/inputPass"
+                app:layout_constraintTop_toBottomOf="@+id/cbNews" />
+
+            <TextView
+                android:id="@+id/tvAlready"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/gotham_book"
+                android:text="@string/already"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@+id/btnSignup" />
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

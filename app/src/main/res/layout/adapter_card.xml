@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_10sdp">
+
+    <ImageView
+        android:id="@+id/img_debit"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_60sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_my_debit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:text="@string/mydebit"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_10sdp"
+        android:fontFamily="@font/gotham_book"
+        app:layout_constraintBottom_toTopOf="@+id/txt_debit_num"
+        app:layout_constraintLeft_toRightOf="@+id/img_debit"
+        app:layout_constraintTop_toTopOf="@+id/img_debit" />
+
+    <TextView
+        android:id="@+id/txt_debit_num"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:textColor="@color/blur_grey"
+        android:fontFamily="@font/gotham_book"
+        android:textSize="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_debit"
+        app:layout_constraintLeft_toRightOf="@+id/img_debit"
+        app:layout_constraintTop_toBottomOf="@+id/txt_my_debit" />
+
+</android.support.constraint.ConstraintLayout>

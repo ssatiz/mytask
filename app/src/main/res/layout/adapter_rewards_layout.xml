@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/clRewards"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="50dp"
+    >
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2V"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline5V"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline7V"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.78" />
+
+    <TextView
+        android:id="@+id/tvDateVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        android:text=""
+        android:fontFamily="@font/gotham_book"
+        android:gravity="center_vertical"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/guideline2V"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTheatresVal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        android:text=""
+        android:fontFamily="@font/gotham_book"
+        android:gravity="center_vertical"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/guideline5V"
+        app:layout_constraintStart_toStartOf="@id/guideline2V" />
+
+    <TextView
+        android:id="@+id/tvTransaction"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        android:text=""
+        android:fontFamily="@font/gotham_book"
+        android:gravity="center_vertical"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/guideline7V"
+        app:layout_constraintStart_toEndOf="@id/guideline5V" />
+
+    <TextView
+        android:id="@+id/tvAmount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        android:text=""
+        android:fontFamily="@font/gotham_book"
+        android:gravity="center_vertical"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline7V" />
+</android.support.constraint.ConstraintLayout>

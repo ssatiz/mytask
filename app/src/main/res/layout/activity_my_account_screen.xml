@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context="com.influx.marcus.theatres.myaccount.MyAccountScreen">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:id="@+id/clMyaccount">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentInsetStart="0dp"
+        android:contentInsetLeft="0dp"
+        android:contentInsetEnd="0dp"
+        android:contentInsetRight="0dp"
+        app:contentInsetEnd="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivBackic"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:gravity="left"
+                android:padding="@dimen/_8sdp"
+                android:src="@drawable/backarrow" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/gothambold"
+                android:gravity="center"
+                android:text="@string/my_account"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/ivUpdate"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/gothammedium"
+                android:gravity="right"
+                android:src="@drawable/select"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/g4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.45" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivBackic"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/profile"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/marcus_red">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/ivEdit"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/edit"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/profile_image"
+                    app:layout_constraintEnd_toEndOf="@+id/profile_image"
+                    app:layout_constraintStart_toStartOf="@+id/profile_image" />
+
+                <ImageView
+                    android:id="@+id/ivQr"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toEndOf="@id/profile_image"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvScan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/gotham_bold"
+                    android:text="@string/scan"
+                    android:textColor="@color/white_light"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toEndOf="@id/profile_image"
+                    app:layout_constraintTop_toBottomOf="@+id/ivQr" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_margin="5dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/profile_image">
+
+                    <ImageView
+                        android:id="@+id/ivSetting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/ic_settings_black_24dp" />
+
+                    <TextView
+                        android:id="@+id/tvProfile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/ivSetting"
+                        android:fontFamily="@font/gotham_bold"
+                        android:text="@string/edit_profile"
+                        android:textColor="@color/white_light" />
+
+                </RelativeLayout>
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/profilelayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/profile">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/inputFName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="@color/white_light"
+                    android:hint="@string/first_name"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+                    android:textColorHint="@color/white_light"
+                    app:hintEnabled="true"
+                    app:layout_constraintTop_toBottomOf="@+id/tvJoin">
+
+                    <EditText
+                        android:id="@+id/editFName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/white_light"
+                        android:fontFamily="@font/gotham_book"
+                        android:imeOptions="actionNext"
+                        android:inputType="textCapSentences"
+                        android:maxLength="20"
+                        android:textColor="@color/white_light"
+                        android:textColorHint="@color/white_light"
+                        android:textSize="14sp" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/inputLName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/white_light"
+                    android:hint="@string/last_name"
+                    android:textColorHint="@color/white_light"
+                    app:hintEnabled="true"
+                    app:layout_constraintTop_toBottomOf="@+id/inputFName">
+
+                    <EditText
+                        android:id="@+id/editLName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/white_light"
+                        android:fontFamily="@font/gotham_book"
+                        android:imeOptions="actionNext"
+                        android:inputType="textCapSentences"
+                        android:maxLength="20"
+                        android:textColor="@color/white_light"
+                        android:textColorHint="@color/white_light"
+                        android:textSize="14sp" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/inputEMail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/white_light"
+                    android:editable="false"
+                    android:hint="@string/hint_email"
+                    android:textColorHint="@color/white_light"
+                    app:hintEnabled="true"
+                    app:layout_constraintTop_toBottomOf="@+id/inputLName">
+
+                    <EditText
+                        android:id="@+id/editEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/white_light"
+                        android:clickable="false"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:fontFamily="@font/gotham_book"
+                        android:imeOptions="actionNext"
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/white_light"
+                        android:textColorHint="@color/white_light"
+                        android:textSize="14sp" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/inputPhNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/white_light"
+                    android:hint="@string/phone_no"
+                    android:imeActionLabel="Done"
+                    android:imeOptions="actionDone"
+                    android:textColorHint="@color/white_light"
+                    app:hintEnabled="true"
+                    app:layout_constraintTop_toBottomOf="@+id/inputEMail">
+
+                    <EditText
+                        android:id="@+id/editPhno"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/white_light"
+                        android:fontFamily="@font/gotham_book"
+                        android:imeOptions="actionDone"
+                        android:inputType="phone"
+                        android:maxLength="12"
+                        android:textColor="@color/white_light"
+                        android:textColorHint="@color/white_light"
+                        android:textSize="14sp" />
+                </android.support.design.widget.TextInputLayout>
+
+                <RadioGroup
+                    android:id="@+id/rbGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/inputPhNo">
+
+                    <RadioButton
+                        android:id="@+id/rbMale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/radio_button_selector"
+                        android:drawablePadding="4dp"
+                        android:fontFamily="@font/gotham_book"
+                        android:text="@string/male"
+                        android:textColor="@color/white_light"
+                        android:textSize="14sp" />
+
+                    <RadioButton
+                        android:id="@+id/rbFemale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/radio_button_selector"
+                        android:drawablePadding="4dp"
+                        android:fontFamily="@font/gotham_book"
+                        android:text="@string/female"
+                        android:textColor="@color/white_light"
+                        android:textSize="14sp"
+                        app:layout_constraintLeft_toRightOf="@+id/rbMale" />
+
+                    <RadioButton
+                        android:id="@+id/rbOthers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/radio_button_selector"
+                        android:drawablePadding="4dp"
+                        android:fontFamily="@font/gotham_book"
+                        android:text="@string/others"
+                        android:textColor="@color/white_light"
+                        android:textSize="14sp"
+                        app:layout_constraintLeft_toRightOf="@+id/rbFemale" />
+                </RadioGroup>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/inputDOB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/white_light"
+                    android:hint="@string/dob"
+                    android:textColorHint="@color/white_light"
+                    app:hintEnabled="true"
+                    app:layout_constraintTop_toBottomOf="@+id/rbGroup">
+
+                    <EditText
+                        android:id="@+id/editDOB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/white_light"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:fontFamily="@font/gotham_book"
+                        android:imeOptions="actionNext"
+                        android:inputType="none"
+                        android:textColor="@color/white_light"
+                        android:textColorHint="@color/white_light"
+                        android:textIsSelectable="true"
+                        android:textSize="14sp" />
+                </android.support.design.widget.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/tvNotification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/gotham_bold"
+                    android:text="Notification"
+                    android:textColor="@color/white_light"
+                    android:textSize="14sp"
+                    app:layout_constraintTop_toBottomOf="@+id/inputDOB" />
+
+                <CheckBox
+                    android:id="@+id/cbNewsletter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:buttonTint="@color/grey_xlight"
+                    android:fontFamily="@font/gotham_bold"
+                    android:text="@string/notification"
+                    android:textColor="@color/white_light"
+                    android:textSize="14sp"
+                    app:layout_constraintTop_toBottomOf="@+id/tvNotification" />
+
+                <TextView
+                    android:id="@+id/tvEditpassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/gotham_bold"
+                    android:text="@string/edit_password"
+                    android:textColor="@color/white_light"
+                    android:textSize="14sp"
+                    app:layout_constraintTop_toBottomOf="@+id/cbNewsletter" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/inputPasswd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/white_light"
+                    android:hint="@string/password"
+                    android:imeActionLabel="Done"
+                    android:imeOptions="actionDone"
+                    android:textColorHint="@color/white_light"
+                    app:hintEnabled="true"
+                    app:layout_constraintTop_toBottomOf="@+id/tvEditpassword"
+                    app:passwordToggleDrawable="@drawable/asl_password_vis"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/white">
+
+                    <EditText
+                        android:id="@+id/editPasswrd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/white_light"
+                        android:fontFamily="@font/gotham_book"
+                        android:imeOptions="actionDone"
+                        android:inputType="textPassword"
+                        android:text=""
+                        android:textColor="@color/white_light"
+                        android:textColorHint="@color/white_light"
+                        android:textSize="14sp" />
+                </android.support.design.widget.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/tvConnectedAccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/gotham_bold"
+                    android:text="@string/connected_account"
+                    android:textColor="@color/white_light"
+                    android:textSize="14sp"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@+id/inputPasswd" />
+
+                <ImageView
+                    android:id="@+id/ivFb"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="18dp"
+                    android:src="@drawable/fb_icon"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@id/tvConnectedAccount" />
+
+                <TextView
+                    android:id="@+id/tvConnectedAcc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="18dp"
+                    android:fontFamily="@font/gotham_book"
+                    android:gravity="center_vertical"
+                    android:text="@string/connectfbnote"
+                    android:textColor="@color/white_light"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toEndOf="@id/ivFb"
+                    app:layout_constraintTop_toBottomOf="@+id/tvConnectedAccount" />
+
+                <TextView
+                    android:id="@+id/unlinkFacebook"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/gotham_bold"
+                    android:text="@string/unlink_account"
+                    android:textColor="@color/marcus_red"
+                    android:textSize="14sp"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@+id/tvConnectedAcc" />
+
+                <ImageView
+                    android:id="@+id/ivGoogle"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="18dp"
+                    android:src="@drawable/google_icon"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@id/unlinkFacebook" />
+
+                <TextView
+                    android:id="@+id/tvConnectedAc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="18dp"
+                    android:fontFamily="@font/gotham_book"
+                    android:gravity="center_vertical"
+                    android:text="@string/connectgooglenote"
+                    android:textColor="@color/white_light"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toEndOf="@id/ivGoogle"
+                    app:layout_constraintTop_toBottomOf="@id/unlinkFacebook" />
+
+                <TextView
+                    android:id="@+id/unlinkGoogle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/gotham_bold"
+                    android:text="@string/unlink_account"
+                    android:textColor="@color/marcus_red"
+                    android:textSize="14sp"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@+id/ivGoogle" />
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/Proftabs"
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                android:fontFamily="@font/gotham_book"
+                app:layout_constraintTop_toBottomOf="@+id/profile"
+                app:tabIndicatorColor="@color/marcus_red"
+                app:tabMode="scrollable"
+                app:tabPadding="0dp"
+                app:tabSelectedTextColor="@color/marcus_red"
+                app:tabTextAppearance="@style/CustomTabText"
+                app:tabTextColor="@color/grey_xlight"
+                tools:ignore="DuplicateIds" />
+
+            <com.influx.marcus.theatres.commonview.WrapContentViewPagerMyAccount
+                android:id="@+id/profTabviewpager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/Proftabs" />
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>

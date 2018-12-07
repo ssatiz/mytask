@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:descendantFocusability="beforeDescendants"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context="com.influx.marcus.theatres.login.LoginScreen">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline35V"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.35" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline50H"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/backarrow" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/gotham_book"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/inputName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/white_light"
+            android:hint="@string/hint_email"
+            android:textColorHint="@color/white_light"
+            app:hintEnabled="true"
+            app:layout_constraintTop_toBottomOf="@+id/ivBack">
+
+            <EditText
+                android:id="@+id/editName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white_light"
+                android:focusableInTouchMode="true"
+                android:fontFamily="@font/gotham_book"
+                android:imeOptions="actionDone"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/white_light"
+                android:textColorHint="@color/white_light"
+                android:textSize="14sp" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/inputPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/white_light"
+            android:hint="@string/hint_pass"
+            android:textColorHint="@color/white_light"
+            app:hintEnabled="true"
+            app:layout_constraintTop_toBottomOf="@+id/inputName"
+            app:passwordToggleDrawable="@drawable/asl_password_vis"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/white">
+
+            <EditText
+                android:id="@+id/editPass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white_light"
+                android:fontFamily="@font/gotham_book"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:maxLength="18"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/white_light"
+                android:textColorHint="@color/white_light"
+                android:textSize="14sp" />
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_36sdp"
+            android:layout_marginTop="20dp"
+            android:background="@color/marcus_red"
+            android:fontFamily="@font/gotham_bold"
+            android:text="@string/login"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintEnd_toEndOf="@id/guideline35V"
+            app:layout_constraintStart_toStartOf="@id/inputPass"
+            app:layout_constraintTop_toBottomOf="@+id/inputPass" />
+
+        <TextView
+            android:id="@+id/tvForget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gotham_book"
+            android:text="@string/forgot_pass"
+            android:textColor="@color/grey_xlight"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/btnLogin"
+            app:layout_constraintEnd_toEndOf="@id/inputPass"
+            app:layout_constraintTop_toTopOf="@+id/btnLogin" />
+
+        <TextView
+            android:id="@+id/tvNewUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/gotham_book"
+            android:text="@string/new_user"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="@id/btnLogin"
+            app:layout_constraintTop_toBottomOf="@id/btnLogin" />
+        <TextView
+            android:id="@+id/tvSignup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/gotham_book"
+            android:text="@string/sign_up"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/marcus_red"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/tvNewUser"
+            app:layout_constraintTop_toBottomOf="@id/btnLogin" />
+
+        <Button
+            android:id="@+id/btnFb"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/fb_icon"
+            android:clickable="false"
+            android:textAllCaps="false"
+            android:fontFamily="@font/gotham_book"
+            app:layout_constraintStart_toStartOf="@id/btnLogin"
+            app:layout_constraintTop_toBottomOf="@id/tvNewUser" />
+
+        <ImageView
+            android:id="@+id/btnGoogle"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/grey_filled"
+            android:clickable="false"
+            android:padding="8dp"
+            android:src="@drawable/google_icon"
+            app:layout_constraintStart_toEndOf="@id/btnFb"
+            app:layout_constraintTop_toBottomOf="@id/tvNewUser" />
+
+        <TextView
+            android:id="@+id/txtOr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:fontFamily="@font/gotham_book"
+            android:text="@string/or"
+            android:textColor="@color/blur_grey"
+            android:textSize="@dimen/_10sdp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/btnGoogle"
+            app:layout_constraintStart_toEndOf="@id/btnGoogle"
+            app:layout_constraintTop_toTopOf="@id/btnGoogle" />
+
+
+        <TextView
+            android:id="@+id/tvContinue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:fontFamily="@font/gotham_book"
+            android:text="@string/continue_as_a"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="@id/btnGoogle"
+            app:layout_constraintStart_toEndOf="@id/txtOr"
+            app:layout_constraintTop_toTopOf="@+id/btnGoogle" />
+        <TextView
+            android:id="@+id/tvGuest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gotham_book"
+            android:text="@string/guest"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/marcus_red"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/tvContinue"
+            app:layout_constraintBottom_toBottomOf="@id/btnGoogle"
+            app:layout_constraintTop_toTopOf="@+id/btnGoogle"
+            />
+        <ImageView
+            android:id="@+id/ivFingerPrint"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="80dp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@id/btnLogin"
+            app:layout_constraintTop_toBottomOf="@+id/tvContinue" />
+
+        <TextView
+            android:id="@+id/tvFingertext"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="center_vertical"
+            android:fontFamily="@font/gotham_book"
+            android:text="@string/finger_print"
+            android:textColor="@color/grey_xlight"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@id/ivFingerPrint"
+            app:layout_constraintTop_toBottomOf="@+id/tvContinue" />
+    </android.support.constraint.ConstraintLayout>
+
+    <View
+        android:id="@+id/viewline"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/grey"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/clMagical" />
+
+
+    <LinearLayout
+        android:id="@+id/clMagical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/vline">
+
+        <TextView
+            android:id="@+id/tvMagical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/gotham_bold"
+            android:text="@string/magical_moview_rewards_member"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvClickhere"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/gotham_bold"
+            android:text="@string/click_here"
+            android:textColor="@color/marcus_red"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/tvMagical"
+            app:layout_constraintTop_toBottomOf="@+id/tvMagical" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/vline"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/grey"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/clNotamember" />
+
+<android.support.constraint.ConstraintLayout
+    android:id="@+id/clNotamember"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="gone"
+    app:layout_constraintBottom_toBottomOf="parent"
+    >
+    <ImageView
+        android:id="@+id/ivLoginReward"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/loginreward"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvNotamember"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/gotham_bold"
+        android:gravity="center_vertical"
+        android:text="@string/not_a_member"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/ivLoginReward"
+        app:layout_constraintStart_toEndOf="@id/ivLoginReward"
+        app:layout_constraintTop_toTopOf="@+id/ivLoginReward" />
+
+    <TextView
+        android:id="@+id/tvJoinnow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/gotham_bold"
+        android:text="@string/join_now"
+        android:textColor="@color/marcus_red"
+        app:layout_constraintBottom_toBottomOf="@+id/ivLoginReward"
+        app:layout_constraintStart_toEndOf="@id/tvNotamember"
+        app:layout_constraintTop_toTopOf="@+id/ivLoginReward" />
+</android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>

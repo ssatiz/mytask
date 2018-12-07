@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context="com.influx.marcus.theatres.forgotpassword.ForgotPasswordScreen">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:fontFamily="@font/gotham_bold"
+        android:gravity="center"
+        android:text="@string/enter_email"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:padding="@dimen/_8sdp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/backarrow"
+        app:layout_constraintStart_toStartOf="@id/tvForget"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <!--  <TextView
+          android:id="@+id/tvForget"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="20dp"
+          android:text="@string/forgot"
+          android:layout_marginStart="20dp"
+          android:layout_marginEnd="20dp"
+          android:fontFamily="@font/gotham_book"
+          android:textColor="@color/grey_xlight"
+          app:layout_constraintTop_toBottomOf="@+id/tvTitle" />-->
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/inputEMail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="80dp"
+        android:hint="@string/hint_email"
+        android:textColorHint="@color/blur_grey"
+        app:hintEnabled="false"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle">
+
+        <EditText
+            android:id="@+id/etEmailid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/grey_xlight"
+            android:fontFamily="@font/gotham_book"
+            android:hint="@string/hint_email"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress"
+            android:text=""
+            android:textColor="@color/white"
+            android:textColorHint="@color/grey_xlight"
+            android:textSize="14sp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/btSendReq"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/marcus_red"
+        android:fontFamily="@font/gotham_bold"
+        android:text="@string/proceed"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>

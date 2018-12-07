@@ -1,0 +1,654 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".myaccount.bookinghistory.RewardDetailActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_36sdp"
+                android:contentInsetEnd="0dp"
+                android:contentInsetLeft="0dp"
+                android:contentInsetRight="0dp"
+                android:contentInsetStart="0dp"
+                app:contentInsetEnd="0dp"
+                app:contentInsetLeft="0dp"
+                app:contentInsetRight="0dp"
+                app:contentInsetStart="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_36sdp">
+
+                    <ImageView
+                        android:id="@+id/ivBackic"
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerInParent="true"
+                        android:gravity="left"
+                        android:padding="@dimen/_8sdp"
+                        android:src="@drawable/backarrow" />
+
+                    <TextView
+                        android:id="@+id/tvTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/gothambold"
+                        android:gravity="center"
+                        android:text="@string/my_account"
+                        android:textColor="@color/white"
+                         />
+
+                    <ImageView
+                        android:id="@+id/ivUpdate"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="20dp"
+                        android:fontFamily="@font/gothammedium"
+                        android:gravity="right"
+                        android:src="@drawable/select"
+                        android:visibility="gone" />
+                </RelativeLayout>
+            </android.support.v7.widget.Toolbar>
+
+            <ImageView
+                android:id="@+id/ivReward"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_150sdp"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+            <TextView
+                android:id="@+id/tvReward"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:background="@color/black"
+                android:fontFamily="@font/gotham_bold"
+                android:paddingEnd="@dimen/_5sdp"
+                android:paddingStart="@dimen/_5sdp"
+                android:text="@string/getrewarded"
+                android:textColor="@color/white_light"
+                android:textSize="18dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/ivReward" />
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginStart="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/loginreward"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/tvReward"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/tvMagical"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/grey"
+                android:fontFamily="@font/gotham_book"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="@string/magical_movie_rewards"
+                android:textColor="@color/grey_xlight"
+                android:textSize="13sp"
+                app:layout_constraintTop_toBottomOf="@+id/tvReward" />
+
+            <ImageView
+                android:id="@+id/ivDropDown"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:gravity="center_vertical"
+                android:padding="15dp"
+                android:src="@drawable/uparrow"
+                android:tint="@color/grey_xlight"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvReward" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/clmagical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:padding="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/tvMagical">
+
+                <!-- <TextView
+                     android:id="@+id/tvMarcus"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_marginTop="8dp"
+                     android:fontFamily="@font/gotham_book"
+                     android:gravity="center_vertical"
+                     android:text="@string/magical_account"
+                     android:textColor="@color/white_light"
+                     android:textSize="14sp"
+                     app:layout_constraintTop_toTopOf="parent" />
+
+                 <View
+                     android:id="@+id/viewMarcus"
+                     android:layout_width="match_parent"
+                     android:layout_height="1dp"
+                     android:layout_marginTop="20dp"
+                     android:background="@color/grey"
+                     app:layout_constraintTop_toBottomOf="@+id/tvMarcus" />-->
+
+                <TextView
+                    android:id="@+id/tvPoints"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="13dp"
+                    android:fontFamily="@font/gotham_medium"
+                    android:gravity="center_vertical"
+                    android:text="@string/points"
+                    android:textColor="@color/marcus_red"
+                    android:textSize="13sp"
+                    app:layout_constraintTop_toBottomOf="@+id/viewMarcus" />
+
+                <TextView
+                    android:id="@+id/tvPointBal"
+                    android:layout_width="match_parent"
+                    android:layout_height="21dp"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/gotham_medium"
+                    android:gravity="center_vertical"
+                    android:text="@string/points_bal"
+                    android:textColor="@color/white_light"
+                    android:textSize="13sp"
+                    app:layout_constraintTop_toBottomOf="@+id/tvPoints" />
+
+                <TextView
+                    android:id="@+id/tvPointsCount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/gotham_book"
+                    android:text="@string/pointvalue"
+                    android:textColor="@color/white_light"
+                    android:textSize="10sp"
+                    app:layout_constraintTop_toBottomOf="@+id/tvPointBal" />
+
+                <TextView
+                    android:id="@+id/tvLoyaltyCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/gotham_book"
+                    android:text="@string/rewardtxt"
+                    android:textColor="@color/marcus_red"
+                    android:textSize="10sp"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@+id/tvPointsCount" />
+
+                <View
+                    android:id="@+id/viewRewards"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/grey"
+                    app:layout_constraintTop_toBottomOf="@+id/tvLoyaltyCard" />
+
+                <TextView
+                    android:id="@+id/tvRewardbal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/gotham_medium"
+                    android:gravity="center_vertical"
+                    android:text="@string/reward_bal"
+                    android:textColor="@color/white_light"
+                    android:textSize="13sp"
+                    app:layout_constraintTop_toBottomOf="@+id/viewRewards" />
+
+                <View
+                    android:id="@+id/viewRewardsBal"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/grey"
+                    android:fontFamily="@font/gotham_book"
+                    app:layout_constraintTop_toBottomOf="@+id/tvRewardbal" />
+
+                <TextView
+                    android:id="@+id/tvCardNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/gotham_book"
+                    android:text="@string/pointvalue"
+                    android:textColor="@color/grey_xlight"
+                    android:textSize="12sp"
+                    app:layout_constraintTop_toBottomOf="@+id/viewRewardsBal" />
+
+                <TextView
+                    android:id="@+id/tvPointDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/gotham_book"
+                    android:text="@string/pointvalue"
+                    android:textColor="@color/white_light"
+                    android:textSize="12sp"
+                    app:layout_constraintTop_toBottomOf="@+id/tvCardNo" />
+            </android.support.constraint.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tvTransaction"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/grey"
+                android:fontFamily="@font/gotham_book"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="@string/your_transactions"
+                android:textColor="@color/grey_xlight"
+                android:textSize="13sp"
+                app:layout_constraintTop_toBottomOf="@+id/clmagical" />
+
+            <ImageView
+                android:id="@+id/ivDropDownB"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="4dp"
+                android:gravity="center_vertical"
+                android:padding="15dp"
+                android:src="@drawable/downarrow"
+                android:tint="@color/grey_xlight"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clmagical" />
+
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/clTransaction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:visibility="visible"
+                app:layout_constraintTop_toBottomOf="@+id/tvTransaction">
+
+                <TextView
+                    android:id="@+id/tvPoint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/gotham_bold"
+                    android:text="@string/points"
+                    android:textColor="@color/marcus_red"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="1dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/grey_xlight"
+                    app:layout_constraintStart_toEndOf="@id/tvPoint"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvRewards"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/gotham_bold"
+                    android:text="@string/rewards"
+                    android:textColor="@color/grey_xlight"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toEndOf="@id/view" />
+
+
+                <TextView
+                    android:id="@+id/tvNoReward"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_100sdp"
+                    android:fontFamily="@font/gotham_bold"
+                    android:gravity="center"
+                    android:text="@string/no_rewards_found"
+                    android:textColor="@color/marcus_red"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@+id/tvRewards" />
+
+                <TextView
+                    android:id="@+id/tvNoPoints"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_100sdp"
+                    android:fontFamily="@font/gotham_bold"
+                    android:gravity="center"
+                    android:text="@string/no_points_found"
+                    android:textColor="@color/marcus_red"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@+id/tvRewards" />
+
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/clFromTo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintTop_toBottomOf="@+id/tvRewards">
+
+                    <android.support.constraint.Guideline
+                        android:id="@+id/gl5V"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.5" />
+
+                    <TextView
+                        android:id="@+id/tvFrom"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="18dp"
+                        android:background="@null"
+                        android:cursorVisible="false"
+                        android:fontFamily="@font/gotham_bold"
+                        android:hint="@string/from"
+                        android:inputType="none"
+                        android:textColor="@color/white_light"
+                        android:textColorHint="@color/white_light"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toTopOf="@+id/vFrom"
+                        app:layout_constraintEnd_toStartOf="@id/gl5V"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginEnd="16sp"
+                        android:layout_marginTop="12dp"
+                        android:src="@drawable/calendar_icon"
+                        android:tint="@color/white_light"
+                        app:layout_constraintBottom_toTopOf="@+id/vFrom"
+                        app:layout_constraintEnd_toStartOf="@id/gl5V" />
+
+
+                    <View
+                        android:id="@+id/vFrom"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/white_light"
+                        app:layout_constraintEnd_toStartOf="@id/gl5V"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tvFrom" />
+
+                    <TextView
+                        android:id="@+id/tvTo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="18dp"
+                        android:background="@null"
+                        android:cursorVisible="false"
+                        android:fontFamily="@font/gotham_bold"
+                        android:hint="@string/to"
+                        android:inputType="none"
+                        android:textColor="@color/white_light"
+                        android:textColorHint="@color/white_light"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/gl5V" />
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginEnd="16sp"
+                        android:layout_marginTop="12dp"
+                        android:src="@drawable/calendar_icon"
+                        android:tint="@color/white_light"
+                        app:layout_constraintBottom_toTopOf="@+id/vto"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <View
+                        android:id="@+id/vto"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/white_light"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/gl5V"
+                        app:layout_constraintTop_toBottomOf="@+id/tvTo" />
+
+                    <View
+                        android:id="@+id/ViewB"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@color/grey"
+                        app:layout_constraintTop_toBottomOf="@+id/vFrom" />
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/clPoints"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@+id/clFromTo">
+
+                    <android.support.constraint.Guideline
+                        android:id="@+id/guideline3V"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.32" />
+
+                    <android.support.constraint.Guideline
+                        android:id="@+id/guideline6V"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.7" />
+
+                    <TextView
+                        android:id="@+id/tvDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="26dp"
+                        android:fontFamily="@font/gotham_book"
+                        android:gravity="center_vertical"
+                        android:text="@string/date"
+                        android:textColor="@color/white"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvTheatres"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gotham_book"
+                        android:gravity="center_vertical"
+                        android:text="@string/theatre"
+                        android:textColor="@color/white"
+                        app:layout_constraintEnd_toEndOf="@id/guideline6V"
+                        app:layout_constraintStart_toStartOf="@id/guideline3V" />
+
+                    <TextView
+                        android:id="@+id/tvPointsEarned"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gotham_book"
+                        android:gravity="center_vertical"
+                        android:text="@string/points_earned"
+                        android:textColor="@color/white"
+                        app:layout_constraintStart_toStartOf="@id/guideline6V" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@color/grey"
+                        app:layout_constraintTop_toBottomOf="@+id/tvDate" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rvPoints"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:clipToPadding="true"
+                        app:layout_constraintTop_toBottomOf="@+id/tvDate" />
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/clRewards"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@+id/clFromTo">
+
+                    <android.support.constraint.Guideline
+                        android:id="@+id/guideline2V"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.25" />
+
+                    <android.support.constraint.Guideline
+                        android:id="@+id/guideline5V"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.5" />
+
+                    <android.support.constraint.Guideline
+                        android:id="@+id/guideline7V"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.78" />
+
+                    <TextView
+                        android:id="@+id/tvDateVal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/gotham_book"
+                        android:text="@string/date"
+                        android:textColor="@color/white"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvTheatresVal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gotham_book"
+                        android:text="@string/theatre"
+                        android:textColor="@color/white"
+                        app:layout_constraintEnd_toStartOf="@id/guideline5V"
+                        app:layout_constraintStart_toStartOf="@id/guideline2V" />
+
+                    <TextView
+                        android:id="@+id/tvTransactionValue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gotham_book"
+                        android:text="@string/transaction"
+                        android:textColor="@color/white"
+                        app:layout_constraintEnd_toEndOf="@id/guideline7V"
+                        app:layout_constraintStart_toEndOf="@id/guideline5V" />
+
+                    <TextView
+                        android:id="@+id/tvAmount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gotham_book"
+                        android:text="@string/amount"
+                        android:textColor="@color/white"
+                        app:layout_constraintStart_toEndOf="@id/guideline7V" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@color/grey"
+                        app:layout_constraintTop_toBottomOf="@+id/tvAmount" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rvRewards"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:clipToPadding="true"
+                        app:layout_constraintTop_toBottomOf="@+id/tvDateVal" />
+
+                </android.support.constraint.ConstraintLayout>
+
+            </android.support.constraint.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tvTerms"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/grey"
+                android:fontFamily="@font/gotham_book"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:text="@string/terms_and_conditions"
+                android:textColor="@color/grey_xlight"
+                android:textSize="13sp"
+                app:layout_constraintTop_toBottomOf="@+id/clTransaction" />
+
+            <ImageView
+                android:id="@+id/ivDropDownC"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="4dp"
+                android:gravity="center_vertical"
+                android:padding="15dp"
+                android:src="@drawable/downarrow"
+                android:tint="@color/grey_xlight"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clTransaction" />
+
+            <WebView
+                android:id="@+id/webview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/tvTerms"
+                tools:ignore="WebViewLayout" />
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

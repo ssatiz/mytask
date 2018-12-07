@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_movies"
+        android:icon="@drawable/movies"
+        android:title="Movies" />
+
+    <item
+        android:id="@+id/ourtheatres"
+        android:icon="@drawable/ourtheatres"
+        android:title="Our Theatres" />
+
+    <item
+        android:id="@+id/specials"
+        android:icon="@drawable/specials"
+        android:title="Specials" />
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/profile"
+        android:title="Profile" />
+</menu>

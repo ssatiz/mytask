@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".theatres.OurTheatres">
+
+    <include
+        android:id="@+id/toolbar_theatre"
+        layout="@layout/toolbar_back_title"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nestedscrollview_ourtheatre"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_marginTop="@dimen/_35sdp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_theatre"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp">
+
+            <!--<AutoCompleteTextView
+                android:id="@+id/etSearchLocations"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:background="@color/black"
+                android:drawableLeft="@drawable/drawable_loc_nongps"
+                android:fontFamily="@font/gotham_book"
+                android:gravity="center_vertical"
+                android:hint="@string/search_for_theatres_city_state"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white_light"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintStart_toStartOf="parent"/>-->
+
+            <com.influx.marcus.theatres.theatres.CustomAutoCompleteView
+                android:id="@+id/etSearchLocations"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:completionThreshold="1"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:background="@color/black"
+                android:drawableLeft="@drawable/drawable_loc_nongps"
+                android:fontFamily="@font/gotham_book"
+                android:gravity="center_vertical"
+                android:hint="@string/search_by_fulladdress"
+                android:textColor="@color/white"
+                android:textColorHint="@color/new_grey"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintStart_toStartOf="parent">
+            </com.influx.marcus.theatres.theatres.CustomAutoCompleteView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:background="@color/grey_xlight"
+                tools:layout_editor_absoluteX="12dp"
+                tools:layout_editor_absoluteY="32dp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                app:layout_constraintTop_toBottomOf="@id/etSearchLocations"
+                tools:ignore="MissingConstraints" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvSearch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/etSearchLocations"
+                app:layout_constraintTop_toBottomOf="@+id/etSearchLocations"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/tvNoDataOutTheatre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/gotham_bold"
+                android:text="@string/no_data_found"
+                android:textColor="@color/marcus_red"
+                android:textSize="@dimen/_10sdp"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/_50sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/clOurTheatres"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="@id/etSearchLocations"
+            app:layout_constraintTop_toBottomOf="@+id/etSearchLocations"
+            android:layout_marginTop="@dimen/_35sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tvTheatresYouLike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:fontFamily="@font/gotham_book"
+                android:gravity="center_vertical"
+                android:hint="Preferred Theatres"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white_light"
+                android:textSize="14sp"
+                />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvHorizontalPreferredLocations"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_170sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/tvTheatresYouLike"
+                app:layout_constraintTop_toBottomOf="@+id/tvTheatresYouLike" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@color/grey_xlight"
+                app:layout_constraintTop_toBottomOf="@id/rvHorizontalPreferredLocations"
+                />
+
+
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/clTheatresNearYouGPS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/_8sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rvHorizontalPreferredLocations">
+
+                <TextView
+                    android:id="@+id/tvNearYou"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:background="@color/black"
+                    android:fontFamily="@font/gotham_book"
+                    android:gravity="center_vertical"
+                    android:text="@string/near_you"
+                    android:textColor="@color/marcus_red"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvTheatresListGPS"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/black"
+                    android:scrollbars="vertical"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvNearYou"
+                    android:paddingBottom="@dimen/_70sdp"/>
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/clTheatresLocationNonGps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:layout_marginTop="@dimen/_8sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rvHorizontalPreferredLocations">
+
+                <TextView
+                    android:id="@+id/tvTheatreLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:background="@color/black"
+                    android:fontFamily="@font/gotham_book"
+                    android:gravity="center_vertical"
+                    android:text="@string/location_txt"
+                    android:textColor="@color/blur_grey"
+                    android:textSize="@dimen/_12sdp"
+                    />
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tabStateLocs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:fontFamily="@font/gotham_book"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTheatreLocation"
+                    app:tabGravity="fill"
+                    app:tabIndicatorColor="@color/marcus_red"
+                    app:tabMode="scrollable"
+                    app:tabPadding="0dp"
+                    app:tabSelectedTextColor="@color/marcus_red"
+                    app:tabTextAppearance="@style/MineCustomTabText"
+                    app:tabTextColor="@color/new_grey" />
+
+                <com.influx.marcus.theatres.customview.WrapContentHeightViewPager
+                    android:id="@+id/vpTheatreLocationNonGPS"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tabStateLocs" />
+
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.constraint.ConstraintLayout>
+
+        </android.support.constraint.ConstraintLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.constraint.ConstraintLayout>

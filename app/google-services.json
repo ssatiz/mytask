@@ -1,0 +1,63 @@
+
+{
+  "project_info": {
+    "project_number": "677726821419",
+    "firebase_url": "https://marcus-theatres-1541745829478.firebaseio.com",
+    "project_id": "marcus-theatres-1541745829478",
+    "storage_bucket": "marcus-theatres-1541745829478.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:677726821419:android:da2ea68535e5b0f6",
+        "android_client_info": {
+          "package_name": "com.influx.marcus.theatres"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "677726821419-gasdk273lceupb2h28h9b652h642e3it.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.influx.marcus.theatres",
+            "certificate_hash": "a2204270488f0e53e030b7e42507b8814ca7cabb"
+          }
+        },
+        {
+          "client_id": "677726821419-i1rhnc3o12l7fsr5205jk0lnlugchkme.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUCtSjcvz26VVtD9HQRdoZsEmzRRapkQ4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "677726821419-i1rhnc3o12l7fsr5205jk0lnlugchkme.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "677726821419-o6gor0jqp2gs0k5b7pjj9q0c45a8htqt.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.influx.MarcusTheatres"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

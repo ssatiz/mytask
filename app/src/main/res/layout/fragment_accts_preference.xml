@@ -1,0 +1,98 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:clipToPadding="true"
+    android:padding="@dimen/_20sdp"
+    tools:context="com.influx.marcus.theatres.myaccount.Accts_Preference">
+
+
+    <TextView
+        android:id="@+id/tvLocationLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:fontFamily="@font/gotham_bold"
+        android:text="@string/theatres_name"
+        android:textColor="@color/marcus_red"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvEditPreferences"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gotham_book"
+        android:text="@string/edit_preferences"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/viewLine"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/grey_xlight"
+        android:gravity="center"
+        app:layout_constraintLeft_toLeftOf="@id/tvEditPreferences"
+        app:layout_constraintRight_toRightOf="@id/tvEditPreferences"
+        app:layout_constraintTop_toBottomOf="@id/tvEditPreferences"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <org.apmem.tools.layouts.FlowLayout
+        android:id="@+id/flLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/tvLocationLabel" />
+
+    <TextView
+        android:id="@+id/tvGenreLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/gotham_bold"
+        android:text="@string/genre"
+        android:textColor="@color/marcus_red"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/flLocation" />
+
+    <org.apmem.tools.layouts.FlowLayout
+        android:id="@+id/flGenre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/tvGenreLabel" />
+
+    <TextView
+        android:id="@+id/tvLanguageLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/gotham_bold"
+        android:text="@string/language"
+        android:textColor="@color/marcus_red"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/flGenre" />
+
+    <org.apmem.tools.layouts.FlowLayout
+        android:id="@+id/flLanguage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/tvLanguageLabel" />
+
+
+</android.support.constraint.ConstraintLayout>

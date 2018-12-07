@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/marcus_red</item>
+        <item name="android:colorAccent">@color/marcus_red</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="colorControlActivated">@color/grey_xlight</item>
+        <item name="colorControlHighlight">@color/grey_xlight</item>
+        <item name="spinnerStyle">@style/Widget.App.Spinner</item>
+        <item name="android:spinnerStyle">@style/Widget.App.Spinner</item>
+        <item name="popupMenuStyle">@style/popupMenuStyle</item>
+        <item name="android:dropDownListViewStyle">@style/mySpinnerStyle</item>
+    </style>
+
+    <style name="DropDownListView.ActionBar.Apptheme" parent="android:style/Widget.ListView.DropDown">
+        <item name="android:dividerHeight">0.1dp</item>
+        <item name="android:divider">#c6969696</item>
+    </style>
+
+    <style name="popupMenuStyle" parent="Widget.AppCompat.PopupMenu">
+        <item name="android:popupBackground">@android:color/black</item>
+    </style>
+
+    <style name="spinner">
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.ActionBar.Apptheme</item>
+    </style>
+
+    <style name="ListText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:background">@color/black</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="menu_text_style" parent="@android:style/TextAppearance.DeviceDefault.Widget.ActionBar.Menu" tools:ignore="NewApi">
+        <!--<item name="android:textSize">@dimen/_11sdp</item>-->
+    </style>
+
+    <style name="Widget.App.Spinner" parent="@style/Widget.AppCompat.Spinner">
+        <item name="overlapAnchor">false</item>
+        <item name="android:background">@drawable/spn_background</item>
+    </style>
+
+    <style name="Widget.App.SpinnerManual" parent="@style/Widget.AppCompat.Spinner">
+        <item name="overlapAnchor">false</item>
+        <item name="android:background">@drawable/spn_backgroundmanual</item>
+    </style>
+
+    <style name="MineCustomTabText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">@dimen/_10sdp</item>
+        <item name="fontFamily">@font/gotham_book</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="CustomDialogTheme" parent="android:Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+
+    <style name="TextAppearance.App.TextInputLayout" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/grey_xlight</item>
+    </style>
+
+    <style name="mySpinnerStyle" parent="android:Widget.ListView.DropDown">
+        <item name="android:divider">@color/grey</item>
+        <item name="android:dividerHeight">1dp</item>
+    </style>
+
+    <string name="addmarcus">Add Marcus Theatres to your Facebook Timeline </string>
+
+    <style name="CustomTabText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">12sp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@font/gotham_book</item>
+    </style>
+
+    <style name="Autocomplete" parent="Widget.AppCompat.Light.AutoCompleteTextView">
+        <item name="android:background">@color/black</item>
+        <item name="colorControlNormal">@color/white</item>
+        <item name="colorControlActivated">@color/white</item>
+    </style>
+
+    <style name="Widget.BottomNavigationView" parent="Widget.Design.BottomNavigationView">
+        <item name="fontFamily">@font/gotham_book</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textSize">@dimen/_11sdp</item>
+    </style>
+
+</resources>

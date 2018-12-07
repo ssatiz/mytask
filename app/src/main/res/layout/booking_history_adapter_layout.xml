@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:id="@+id/constraintLayout">
+
+        <TextView
+            android:id="@+id/tvMveName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/gotham_bold"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/tvCinemaName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:fontFamily="@font/gotham_book"
+            android:textColor="@color/grey_xlight"
+            app:layout_constraintTop_toBottomOf="@+id/tvMveName"
+            android:gravity="center"
+            android:drawableLeft="@drawable/ic_location_black"/>
+
+        <ImageView
+            android:id="@+id/ivExperience"
+            android:layout_width="100dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="7dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toBottomOf="@+id/tvMveName"
+            app:layout_constraintStart_toEndOf="@id/tvCinemaName"/>
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/date_black"
+            android:fontFamily="@font/gotham_medium"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@+id/tvCinemaName" />
+        <View
+            android:id="@+id/view"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/grey_xlight"
+            app:layout_constraintBottom_toBottomOf="@+id/tvDate"
+            app:layout_constraintStart_toEndOf="@id/tvDate"
+            app:layout_constraintTop_toBottomOf="@+id/tvCinemaName"
+            app:layout_constraintTop_toTopOf="@+id/tvDate" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:drawablePadding="-2dp"
+            android:drawableStart="@drawable/time_black"
+            android:fontFamily="@font/gotham_medium"
+            android:gravity="center|right"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintStart_toEndOf="@+id/view"
+            app:layout_constraintTop_toBottomOf="@+id/tvCinemaName" />
+        <TextView
+            android:id="@+id/tvSelectedSeats"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="-2dp"
+            android:fontFamily="@font/gotham_medium"
+            android:drawableStart="@drawable/seat_icon_black"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@+id/tvTime" />
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

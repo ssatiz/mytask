@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:context="com.influx.marcus.theatres.seatlayout.SeatLayoutActivity">
+
+    <RelativeLayout
+        android:id="@+id/laytop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rrBottomLayout">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/laytopCons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <ImageView
+                android:id="@+id/ivPosterLandscape"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/black_filled"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+
+                android:background="@drawable/gradient_bookreview"
+                app:layout_constraintBottom_toBottomOf="@id/vLine"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivBackbtn"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginTop="5dp"
+                android:padding="@dimen/_8sdp"
+                android:src="@drawable/backarrow"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_90sdp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:background="@color/black"
+                app:layout_constraintBottom_toBottomOf="@id/ivPosterLandscape"
+                app:layout_constraintEnd_toEndOf="@id/ivPosterLandscape"
+                app:layout_constraintStart_toStartOf="@id/ivPosterLandscape"
+                app:layout_constraintTop_toBottomOf="@+id/ivPosterLandscape" />
+
+            <TextView
+                android:id="@+id/tvMovieTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/gotham_bold"
+                android:gravity="center"
+                android:paddingLeft="@dimen/_35sdp"
+                android:paddingRight="@dimen/_35sdp"
+                android:paddingTop="15dp"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toRightOf="@+id/ivBackbtn" />
+
+            <TextView
+                android:id="@+id/tvCinemaLoc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/gotham_book"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.52"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvMovieTitle" />
+
+            <ImageView
+                android:id="@+id/ivLoc"
+                android:layout_width="24dp"
+                android:layout_height="20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvCinemaLoc"
+                app:layout_constraintEnd_toStartOf="@+id/tvCinemaLoc"
+                app:layout_constraintTop_toTopOf="@+id/tvCinemaLoc"
+                app:srcCompat="@drawable/location" />
+
+            <View
+                android:id="@+id/vLine"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:background="@color/blur_grey"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/view2"
+                app:layout_constraintTop_toTopOf="@id/view2" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/gl3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.35" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/gl7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.65" />
+
+            <View
+                android:id="@+id/vDateBg"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:background="@color/marcus_red"
+                app:layout_constraintBottom_toTopOf="@+id/view2"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpagerTime"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_44sdp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/vDateBg"
+                app:layout_constraintEnd_toStartOf="@+id/ivRight"
+                app:layout_constraintStart_toEndOf="@+id/ivLeft"
+                app:layout_constraintTop_toTopOf="@+id/vDateBg"
+                app:layout_constraintVertical_bias="0.411" />
+
+            <View
+                android:id="@+id/vredgradientl"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/red_gradient_left"
+                android:paddingEnd="@dimen/_10sdp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@+id/vDateBg"
+                app:layout_constraintBottom_toTopOf="@+id/view2"
+                app:layout_constraintEnd_toEndOf="@+id/gl3"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <View
+                android:id="@+id/vredgradientr"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/red_gradient_right"
+                android:paddingStart="@dimen/_10sdp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@+id/vDateBg"
+                app:layout_constraintBottom_toTopOf="@+id/view2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/gl7" />
+
+            <ImageView
+                android:id="@+id/ivLeft"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:fitsSystemWindows="true"
+                android:padding="20dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/leftarrow"
+                app:layout_constraintBottom_toBottomOf="@+id/vDateBg"
+                app:layout_constraintBottom_toTopOf="@+id/view2"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivRight"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:fitsSystemWindows="true"
+                android:padding="20dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/rightarrow"
+                app:layout_constraintBottom_toBottomOf="@+id/vDateBg"
+                app:layout_constraintBottom_toTopOf="@+id/view2"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <RelativeLayout
+                android:id="@+id/llDateExp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:background="@color/black"
+                app:layout_constraintTop_toBottomOf="@+id/vredgradientl">
+
+                <TextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="@dimen/_92sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_24sdp"
+                    android:layout_marginStart="10dp"
+                    android:drawablePadding="@dimen/_4sdp"
+                    android:drawableStart="@drawable/date_white"
+                    android:fontFamily="@font/gotham_medium"
+                    android:gravity="left|center_vertical"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+
+                <ImageView
+                    android:id="@+id/ivExpimg"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginRight="10dp"
+                    android:scaleType="fitXY" />
+
+                <TextView
+                    android:id="@+id/tvExperienceName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:fontFamily="@font/gotham_medium"
+                    android:gravity="left|center_vertical"
+                    android:text=""
+                    android:textColor="@color/marcus_red"
+                    android:visibility="gone" />
+
+
+                <!--     <TextView
+                         android:id="@+id/tvTime"
+                         android:layout_width="@dimen/_96sdp"
+                         android:layout_height="wrap_content"
+                         android:layout_marginBottom="8dp"
+                         android:layout_marginEnd="12dp"
+                         android:layout_marginTop="12dp"
+                         android:fontFamily="@font/gotham_medium"
+                         android:gravity="center|right"
+                         android:textColor="@color/black"
+                         android:textSize="@dimen/_10sdp"
+                         app:layout_constraintBottom_toTopOf="@+id/vLine"
+                         app:layout_constraintEnd_toEndOf="@+id/view2"
+                         app:layout_constraintTop_toTopOf="@+id/view2" />
+         -->
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/llDateExp">
+
+                <TextView
+                    android:id="@+id/tvSelectedSeatsLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:drawableLeft="@drawable/seat_icon_black"
+                    android:fontFamily="@font/gotham_book"
+                    android:gravity="center"
+                    android:text="@string/selected_seat"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="@+id/view2"
+                    app:layout_constraintTop_toBottomOf="@+id/ivPosterLandscape" />
+
+                <TextView
+                    android:id="@+id/tvSelectedSeats"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/gotham_bold"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="@id/textView3"
+                    app:layout_constraintStart_toStartOf="@+id/tvSelectedSeatsLabel"
+                    app:layout_constraintTop_toBottomOf="@+id/tvSelectedSeatsLabel" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toStartOf="@+id/tvOcupiedLabel"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textView2"
+                app:layout_constraintTop_toBottomOf="@+id/view2"
+                app:srcCompat="@drawable/selected_seat_grey" />
+
+            <TextView
+                android:id="@+id/tvOcupiedLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/gotham_book"
+                android:text="@string/occupied_seat"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                app:layout_constraintEnd_toStartOf="@+id/imageView4"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/imageView"
+                app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toStartOf="@+id/textView2"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view2"
+                app:srcCompat="@drawable/empty_seat_icon" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/gotham_book"
+                android:text="@string/available"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+                app:layout_constraintEnd_toStartOf="@+id/imageView"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/imageView3"
+                app:layout_constraintTop_toTopOf="@+id/imageView3" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toStartOf="@+id/textView3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/tvOcupiedLabel"
+                app:layout_constraintTop_toBottomOf="@+id/view2"
+                app:srcCompat="@drawable/red_filled" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/gotham_book"
+                android:text="@string/selected_seat"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/imageView4"
+                app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guidelineVertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <LinearLayout
+                android:id="@+id/llSeats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@id/guidelineVertical"
+                app:layout_constraintStart_toStartOf="@id/guidelineVertical"
+                app:layout_constraintTop_toBottomOf="@id/tvOcupiedLabel">
+
+
+                <ImageView
+                    android:id="@+id/ivCoupleLegendLeft"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/sofaleft" />
+
+                <ImageView
+                    android:id="@+id/ivCoupleLegendRight"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/sofaright" />
+
+                <TextView
+                    android:id="@+id/tvCoupleLegendText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/gotham_book"
+                    android:text="@string/coupleseat"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+
+
+                <ImageView
+                    android:id="@+id/ivWheelchair"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/wheelchair_seat_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/gotham_book"
+                    android:text="@string/wheelchair"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+
+                <ImageView
+                    android:id="@+id/ivCompanion"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/companion_seat_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/gotham_book"
+                    android:text="@string/companion"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/imageView5"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_32sdp"
+                android:scaleType="fitXY"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:src="@drawable/curvebackground"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llSeats" />
+
+
+            <TextView
+                android:id="@+id/tvScreenLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/gotham_book"
+                android:gravity="center"
+                android:text="SCREEN 1"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toStartOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/laytopCons"
+            android:paddingTop="@dimen/_5sdp">
+
+            <com.otaliastudios.zoom.ZoomLayout
+                android:id="@+id/zlSeatparent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:scrollbars="vertical|horizontal"
+                app:hasClickableChildren="true"
+                app:horizontalPanEnabled="true"
+                app:overPinchable="false"
+                app:transformation="centerInside"
+                app:verticalPanEnabled="true"
+                app:zoomEnabled="true">
+
+                <TableLayout
+                    android:id="@+id/tblSeats"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_5sdp" />
+            </com.otaliastudios.zoom.ZoomLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rrBottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_36sdp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/marcus_red"
+        android:paddingEnd="20dp"
+        android:paddingStart="10dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvAmt"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_36sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/gotham_bold"
+            android:gravity="center_vertical"
+            android:text="$0"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tvContinue"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_36sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/gotham_bold"
+            android:gravity="center_vertical"
+            android:text="@string/continue_"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </RelativeLayout>
+</RelativeLayout>

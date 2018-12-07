@@ -1,0 +1,131 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollLayoutParent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:descendantFocusability="beforeDescendants"
+        tools:context="com.influx.marcus.theatres.preferences.LocationGPSFragment">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvSelectedCinema"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_28sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/etSearchLocations"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:background="@color/black"
+            android:drawableLeft="@drawable/drawable_loc_nongps"
+            android:drawableRight="@drawable/drawable_up_nongps"
+            android:fontFamily="@font/gotham_book"
+            android:gravity="center_vertical"
+            android:text="@string/choose_your_location"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rvSelectedCinema" />
+
+        <ExpandableListView
+            android:id="@+id/lvExp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:visibility="gone"
+            android:listSelector="@android:color/transparent"
+            app:layout_constraintBottom_toTopOf="@id/llAutodetectLocation"
+            app:layout_constraintTop_toBottomOf="@+id/etCityname" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvStatelist"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="@color/black"
+            android:scrollbars="vertical"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@id/llAutodetectLocation"
+            app:layout_constraintEnd_toEndOf="@id/etSearchLocations"
+            app:layout_constraintStart_toStartOf="@id/etSearchLocations"
+            app:layout_constraintTop_toBottomOf="@id/etSearchLocations" />
+
+        <EditText
+            android:id="@+id/etCityname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="@color/marcus_red"
+            android:focusable="false"
+            android:fontFamily="@font/gotham_book"
+            android:hint="@string/search_by_fulladdress"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="11sp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/etSearchLocations" />
+
+        <TextView
+            android:id="@+id/tvNoLocationFound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gotham_book"
+            android:text="@string/no_location_found"
+            android:textColor="@color/marcus_red"
+            android:textSize="18sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etCityname" />
+
+
+        <LinearLayout
+            android:id="@+id/llAutodetectLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_24sdp"
+            android:layout_marginEnd="@dimen/_24sdp"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="center"
+                android:scaleType="fitXY"
+                android:src="@drawable/gps" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/gotham_book"
+                android:text="@string/find_me"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

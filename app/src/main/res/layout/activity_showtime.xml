@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.influx.marcus.theatres.utils.CustomScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/svParent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:id="@+id/llParentShowLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical">
+        <!--this is top layout with movie details brief : rlMovieTop   -->
+        <RelativeLayout
+            android:id="@+id/rlMovieTop"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_255sdp">
+
+            <ImageView
+                android:id="@+id/ivTrailer"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_200sdp"
+                android:scaleType="fitXY"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_200sdp"
+                android:gravity="center">
+
+                <com.wang.avi.AVLoadingIndicatorView
+                    android:id="@+id/loader"
+                    style="@style/AVLoadingIndicatorView"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="8dp"
+                    android:visibility="visible"
+                    app:indicatorColor="@color/marcus_red"
+                    app:indicatorName="LineSpinFadeLoaderIndicator" />
+
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/ivPlayTrailer"
+                android:layout_width="@dimen/_56sdp"
+                android:layout_height="@dimen/_56sdp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/play" />
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_margin="@dimen/_8sdp"
+                android:src="@drawable/circle_back" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/clDetail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_70sdp"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/ivTrailer"
+                android:background="@color/black">
+
+                <android.support.constraint.Barrier
+                    android:id="@+id/barrierIvInfor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:barrierDirection="left"
+                    app:constraint_referenced_ids="ivInfoMovieDetail" />
+
+
+                <TextView
+                    android:id="@+id/tvMovieTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/gotham_bold"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toStartOf="@id/barrierIvInfor"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/ivInfoMovieDetail"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_margin="8dp"
+                    android:padding="8dp"
+                    android:src="@drawable/info"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvclose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:fontFamily="@font/gotham_book"
+                    android:text="Close"
+                    android:textColor="@color/white"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tvLanguageGenre" />
+
+                <View
+                    android:id="@+id/viewLine"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    app:layout_constraintEnd_toEndOf="@id/tvclose"
+                    app:layout_constraintStart_toStartOf="@id/tvclose"
+                    app:layout_constraintTop_toBottomOf="@id/tvclose"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/tvLanguageGenre"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/gotham_book"
+                    android:text=""
+                    android:textColor="@color/grey_xlight"
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toStartOf="@id/guideline50v"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvMovieTitle" />
+
+                <TextView
+                    android:id="@+id/tvRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="16dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/dark_gray_border"
+                    android:fontFamily="@font/gotham_bold"
+                    android:padding="2dp"
+                    android:textColor="@color/grey_xlight"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toEndOf="@id/tvLanguageGenre"
+                    app:layout_constraintTop_toBottomOf="@id/tvMovieTitle" />
+
+
+                <TextView
+                    android:id="@+id/tvDuration"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/gotham_book"
+                    android:textColor="@color/grey_xlight"
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toStartOf="@id/barrierIvInfor"
+                    app:layout_constraintStart_toEndOf="@id/tvRating"
+                    app:layout_constraintTop_toBottomOf="@id/tvMovieTitle" />
+
+                <android.support.constraint.Guideline
+                    android:id="@+id/guideline50v"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.5" />
+            </android.support.constraint.ConstraintLayout>
+        </RelativeLayout>
+        <!--this is movie detail  cast,synopsis etc : llMovieDetail -->
+        <LinearLayout
+            android:id="@+id/llMovieDetail"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:background="@color/black"
+                android:orientation="vertical">
+
+                <com.influx.marcus.theatres.utils.CustomScrollView
+                    android:id="@+id/svMovidedata"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_200sdp"
+                    android:layout_weight="0.8">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tvSynopsislabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="@font/gotham_bold"
+                            android:text="SYNOPSIS"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvSynopsisData"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/gotham_book"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvSynopsislabel" />
+
+
+                        <TextView
+                            android:id="@+id/tvCastcrew"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="32dp"
+                            android:fontFamily="@font/gotham_bold"
+                            android:text="@string/cast_and_crew"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvSynopsisData" />
+
+                        <org.apmem.tools.layouts.FlowLayout
+                            android:id="@+id/flCastData"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal"
+                            app:layout_constraintStart_toStartOf="@id/tvCastcrew"
+                            app:layout_constraintTop_toBottomOf="@+id/tvCastcrew" />
+
+                        <TextView
+                            android:id="@+id/tvDirectorLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="@font/gotham_bold"
+                            android:text="@string/director"
+                            android:textColor="@color/white"
+                            app:layout_constraintStart_toStartOf="@id/tvCastcrew"
+                            app:layout_constraintTop_toBottomOf="@id/flCastData" />
+
+                        <org.apmem.tools.layouts.FlowLayout
+                            android:id="@+id/flDirectorData"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal"
+                            app:layout_constraintStart_toStartOf="@id/tvCastcrew"
+                            app:layout_constraintTop_toBottomOf="@+id/tvDirectorLabel" />
+                    </android.support.constraint.ConstraintLayout>
+                </com.influx.marcus.theatres.utils.CustomScrollView>
+
+                <Button
+                    android:id="@+id/btnBookNow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_36sdp"
+                    android:layout_marginBottom="@dimen/_4sdp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:background="@color/white"
+                    android:fontFamily="@font/gotham_medium"
+                    android:paddingLeft="24dp"
+                    android:paddingRight="24dp"
+                    android:text="@string/buy_tickets"
+                    android:textAllCaps="false"
+                    android:textColor="@color/marcus_red" />
+            </LinearLayout>
+        </LinearLayout>
+        <!-- this is search and select date layout  : searchLayout-->
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/searchLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_90sdp"
+            android:background="@color/marcus_red">
+
+            <com.influx.marcus.theatres.utils.InstantAutoComplete
+                android:id="@+id/editCinema"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:drawableStart="@drawable/location_black"
+                android:fontFamily="@font/gotham_book"
+                android:hint="@string/enter_cinema"
+                android:imeOptions="actionDone"
+                android:textColor="@color/grey_xlight"
+                android:textColorHint="@color/grey_xlight"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/icClose"
+                android:layout_width="25dp"
+                android:layout_height="36dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/closeround"
+                android:tint="@color/grey_xlight"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/editCinema" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpagerDate"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="60dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/ivRight"
+                app:layout_constraintStart_toEndOf="@+id/ivLeft"
+                app:layout_constraintTop_toBottomOf="@+id/editCinema" />
+
+
+            <View
+                android:id="@+id/vredgradientl"
+                android:layout_width="@dimen/_55sdp"
+                android:layout_height="50dp"
+                android:background="@drawable/red_gradient_left"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivLeft"
+                app:layout_constraintTop_toBottomOf="@+id/editCinema" />
+
+            <View
+                android:id="@+id/vredgradientr"
+                android:layout_width="@dimen/_63sdp"
+                android:layout_height="50dp"
+                android:background="@drawable/red_gradient_right"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/ivRight"
+                app:layout_constraintTop_toBottomOf="@+id/editCinema" />
+
+            <ImageView
+                android:id="@+id/ivLeft"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:fitsSystemWindows="true"
+                android:padding="15dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/leftarrow"
+                app:layout_constraintBottom_toBottomOf="@id/viewpagerDate"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/viewpagerDate" />
+
+            <ImageView
+                android:id="@+id/ivRight"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:fitsSystemWindows="true"
+                android:padding="15dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/rightarrow"
+                app:layout_constraintBottom_toBottomOf="@id/viewpagerDate"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/viewpagerDate" />
+        </android.support.constraint.ConstraintLayout>
+        <!--No showtimes layout : tvNoShowtimes -->
+        <TextView
+            android:id="@+id/tvNoShowtimes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_45sdp"
+            android:fontFamily="@font/gotham_book"
+            android:text="@string/no_showtimes_available"
+            android:textColor="@color/marcus_red"
+            android:textSize="18sp"
+            android:visibility="gone" />
+        <!--Showtimes layout : llShowtimesHolder-->
+        <LinearLayout
+            android:id="@+id/llShowtimesHolder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible" />
+        <!--showtimes using recyclerview-->
+        <!--
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvShowtimes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            />
+            -->
+
+        <!-- Loadmore cinemas bottom : clViewmore -->
+        <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/clViewmore"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_36sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/btnViewMore"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_36sdp"
+                android:background="@drawable/black_prefbackground"
+                android:fontFamily="@font/gotham_book"
+                android:text="@string/view_more"
+                android:textAllCaps="false"
+                android:textColor="@color/subtextgrey"
+                android:textSize="14sp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+    </LinearLayout>
+</com.influx.marcus.theatres.utils.CustomScrollView>

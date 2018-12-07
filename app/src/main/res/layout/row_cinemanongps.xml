@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="4dp"
+android:padding="@dimen/_3sdp">
+
+
+<RelativeLayout
+    android:id="@+id/ivPreferredLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/ivPreferred"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</RelativeLayout>
+
+
+<RelativeLayout
+    android:id="@+id/tvCinemaNameLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintStart_toEndOf="@id/ivPreferredLayout"
+    app:layout_constraintTop_toTopOf="@id/ivPreferredLayout" >
+
+    <TextView
+        android:id="@+id/tvCinemaName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:paddingRight="20dp"
+        android:layout_marginTop="4dp"
+        android:text=""
+        android:fontFamily="@font/gothambold"
+        android:textColor="@color/marcus_red"
+        />
+
+</RelativeLayout>
+
+<ImageView
+    android:id="@+id/ivLocationMiles"
+    android:layout_width="20dp"
+    android:layout_height="20dp"
+    android:src="@drawable/location"
+    android:visibility="gone"
+    app:layout_constraintStart_toStartOf="@id/tvCinemaNameLayout"
+    app:layout_constraintTop_toBottomOf="@id/tvCinemaNameLayout" />
+
+<TextView
+    android:id="@+id/tvMiles"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
+    android:fontFamily="@font/gotham_book"
+    android:textColor="@color/white"
+    android:textSize="12sp"
+    android:visibility="gone"
+    app:layout_constraintBottom_toBottomOf="@id/ivLocationMiles"
+    app:layout_constraintStart_toEndOf="@id/ivLocationMiles"
+    app:layout_constraintTop_toTopOf="@id/ivLocationMiles" />
+
+<TableLayout
+    android:id="@+id/tblShows"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginTop="4dp"
+    android:fontFamily="@font/gotham_book"
+    app:layout_constraintTop_toBottomOf="@id/tvCinemaNameLayout" />
+
+<View
+    android:id="@+id/view"
+    android:layout_width="match_parent"
+    android:layout_height="0.2dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginTop="16dp"
+    android:visibility="gone"
+    app:layout_constraintTop_toBottomOf="@+id/tblShows"
+    android:background="@color/grey_xlight"/>
+
+<TextView
+    android:id="@+id/tvNearby"
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:padding="2dp"
+    android:layout_marginLeft="16dp"
+    android:fontFamily="@font/gotham_bold"
+    android:text="@string/nearby"
+    android:layout_marginTop="4dp"
+    android:textColor="@color/white"
+    android:visibility="gone"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/view"
+    android:textSize="14sp"/>
+</android.support.constraint.ConstraintLayout>

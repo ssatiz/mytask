@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_130sdp"
+        android:background="@drawable/menubg">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="140dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="20dp"
+                android:contentDescription="@string/nav_header_desc"
+                android:scaleType="fitXY"
+                android:src="@drawable/magiclogin"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/gotham_book"
+                android:lineSpacingExtra="@dimen/_4sdp"
+                android:text="@string/nav_register"
+                android:textColor="@color/white_light"
+                android:textSize="14sp"
+
+                app:layout_constraintStart_toEndOf="@id/imageView"
+                app:layout_constraintTop_toTopOf="@id/imageView" />
+
+            <TextView
+                android:id="@+id/tvBonus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:fontFamily="@font/gotham_bold"
+                android:textColor="@color/white_light"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@id/imageView"
+                app:layout_constraintTop_toBottomOf="@id/tvRegister" />
+
+            <Button
+                android:id="@+id/btJoinNow"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/white"
+                android:fontFamily="@font/gotham_bold"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:padding="@dimen/_2sdp"
+                android:text="@string/join_now"
+                android:textColor="@color/marcus_red"
+                app:layout_constraintStart_toEndOf="@id/imageView"
+                app:layout_constraintTop_toBottomOf="@+id/tvBonus" />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:padding="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header">
+
+
+        <ImageView
+            android:id="@+id/tvBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:gravity="center_vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            android:src="@drawable/circle_back"
+            app:layout_constraintRight_toLeftOf="@+id/ivClose" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:fontFamily="@font/gotham_book"
+            android:textColor="@color/white_light"
+            android:text="Version 1.0"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/tvMovies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/gotham_bold"
+            android:padding="8dp"
+            android:text="@string/movies"
+            android:textColor="@color/white_light"
+            android:textSize="20sp"
+            app:layout_constraintRight_toLeftOf="@+id/ivClose"
+            app:layout_constraintTop_toBottomOf="@+id/tvBack"/>
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:padding="8dp"
+            android:visibility="gone"
+            android:src="@drawable/close_ic"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/tvSpecial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/gotham_bold"
+            android:padding="8dp"
+            android:text="@string/specials"
+            android:textColor="@color/white_light"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@+id/tvMovies" />
+
+        <TextView
+            android:id="@+id/tvTheatres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/gotham_bold"
+            android:padding="8dp"
+            android:text="@string/theatres"
+            android:textColor="@color/white_light"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@+id/tvSpecial" />
+
+        <TextView
+            android:id="@+id/tvMyAcoount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/gotham_book"
+            android:padding="8dp"
+            android:text="@string/profile"
+            android:textColor="@color/white_light"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@+id/tvTheatres" />
+
+        <TextView
+            android:id="@+id/tvMagical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/gotham_book"
+            android:padding="8dp"
+            android:text="@string/magical_movie_rewards"
+            android:textColor="@color/white_light"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@+id/tvMyAcoount" />
+
+        <TextView
+            android:id="@+id/tvGiftCards"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/gotham_book"
+            android:padding="8dp"
+            android:text="Gift Cards"
+            android:textColor="@color/white_light"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@+id/tvMagical" />
+
+        <TextView
+            android:id="@+id/tvExperience"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/gotham_book"
+            android:padding="8dp"
+            android:visibility="gone"
+            android:text="@string/experience"
+            android:textColor="@color/white_light"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@+id/tvGiftCards" />
+
+        <TextView
+            android:id="@+id/tvEvents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/gotham_book"
+            android:padding="8dp"
+            android:visibility="gone"
+            android:text="@string/events"
+            android:textColor="@color/white_light"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@+id/tvExperience" />
+
+
+        <TextView
+            android:id="@+id/tvMore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/gotham_book"
+            android:padding="8dp"
+            android:text="@string/more"
+            android:textColor="@color/marcus_red"
+            android:textSize="14sp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/tvEvents" />
+
+
+        <TextView
+            android:id="@+id/tvAboutus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/gotham_book"
+            android:padding="8dp"
+            android:text="@string/about_us"
+            android:textColor="@color/white_light"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@+id/tvEvents"
+
+            />
+
+        <TextView
+            android:id="@+id/tvFaq"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/gotham_book"
+            android:padding="8dp"
+            android:text="@string/faq"
+            android:textColor="@color/white_light"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@+id/tvAboutus" />
+
+        <TextView
+            android:id="@+id/tvContact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/gotham_book"
+            android:padding="8dp"
+            android:text="@string/contact_us"
+            android:textColor="@color/white_light"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@+id/tvFaq" />
+
+        <TextView
+            android:id="@+id/tvTerms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/gotham_book"
+            android:padding="8dp"
+            android:text="@string/terms"
+            android:textColor="@color/white_light"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@+id/tvContact" />
+
+        <TextView
+            android:id="@+id/tvPrivacy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/gotham_book"
+            android:padding="8dp"
+            android:text="@string/privacy_policy"
+            android:textColor="@color/white_light"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@+id/tvTerms" />
+
+        <TextView
+            android:id="@+id/tvSignOut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/gotham_book"
+            android:padding="8dp"
+            android:text="@string/sign_out"
+            android:textColor="@color/marcus_red"
+            android:textSize="14sp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/tvPrivacy" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/contentabout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:padding="8dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/content">
+
+        <ImageView
+            android:id="@+id/ivBackimg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_arrow_back_black_24dp"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

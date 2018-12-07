@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    android:padding="12dp"
+    tools:context=".unreservedbooking.ticketAdapter">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline3V"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline7V"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <TextView
+        android:id="@+id/tvTickeytype"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/gotham_bold"
+        android:gravity="center"
+        android:text="@string/adult"
+        android:textColor="@color/white_light"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@id/guideline7V"
+        app:layout_constraintStart_toEndOf="@id/guideline3V" />
+
+    <TextView
+        android:id="@+id/tvCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/gotham_bold"
+        android:text=""
+        android:textColor="@color/white_light"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@id/tvTickeytype" />
+
+    <TextView
+        android:id="@+id/tvTicketDef"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gotham_book"
+        android:visibility="gone"
+        android:text="@string/child_3_to_11"
+        android:textColor="@color/white_light"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@id/guideline7V"
+        app:layout_constraintStart_toEndOf="@id/guideline3V"
+        app:layout_constraintTop_toBottomOf="@+id/tvCount" />
+
+    <TextView
+        android:id="@+id/tvAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gotham_book"
+        android:textColor="@color/marcus_red"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@id/guideline7V"
+        app:layout_constraintStart_toEndOf="@id/guideline3V"
+        app:layout_constraintTop_toBottomOf="@+id/tvTicketDef" />
+
+    <ImageView
+        android:id="@+id/ivMinus"
+        android:layout_width="40dp"
+        android:layout_height="0dp"
+        android:src="@drawable/minus"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvAmount"
+        app:layout_constraintEnd_toStartOf="@id/guideline3V"
+        app:layout_constraintTop_toTopOf="@+id/tvTickeytype" />
+
+    <ImageView
+        android:id="@+id/ivPlus"
+        android:layout_width="40dp"
+        android:layout_height="0dp"
+        android:src="@drawable/plus"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvAmount"
+        app:layout_constraintStart_toStartOf="@id/guideline7V"
+        app:layout_constraintTop_toTopOf="@+id/tvTickeytype" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,376 @@
+<resources>
+    <string name="app_name">Marcus Theatres </string>
+    <string name="location_desp">We\'d like to use your location to suggest the cinema nearest to you.</string>
+    <string name="nothanks">No Thanks</string>
+    <string name="title_activity_payment_screen">PaymentScreen</string>
+    <string name="title_activity_qrlogin">QRLogin</string>
+    <string name="nav_register">Register Your Card Now \nto Receive</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="terms">Terms &amp; Conditions</string>
+
+    <string name="nearby">Nearby </string>
+    <!--Payment Screen-->
+    <string name="debit_credit">Debit / Credit Card</string>
+    <string name="masterpass">Masrterpass</string>
+    <string name="chose_card">Choose Card</string>
+    <string name="mydebit">My Debit Card</string>
+    <string name="total_card">Total card payment</string>
+    <string name="pay_with">Pay with</string>
+    <string name="pay">Pay</string>
+    <string name="Add_Card">+ Add Card</string>
+    <string name="facebook_app_id">265554254152114</string>
+    <string name="fb_login_protocol_scheme">fb265554254152114</string>
+    <string name="map_api">AIzaSyBsFLTgQH8mHDRA8pqkiEk3yBtH81STVSA</string>
+    <!--Booking Confirmation-->
+
+    <string name="booking_success">Booking successful!</string>
+
+    <string name="tickets_text">This digital ticket will be\nscanned at the
+        door.</string>
+    <string name="share_tickets_text">Thrill your buds to bits!\nSend them their tickets. Share the
+    love.</string>
+    <string name="send_friend">Send to a friend</string>
+    <string name="no_data">No data found</string>
+    <string name="no_movie">No movies found</string>
+    <string name="add_to">Add to</string>
+    <string name="apple_wallet">Apple Wallet</string>
+    <string name="home">Home</string>
+    <string name="share">Share</string>
+    <string name="no_content">No content avialable</string>
+    <string name="terms_condn">Terms </string>
+    <string name="magical_account">Marcus Magical Movie rewards Accounts</string>
+    <string name="points">Points</string>
+    <string name="choose_card">Pay through saved cards</string>
+    <string name="gift_cards">Pay through gift cards</string>
+    <string name="reward_bal">Rewards balance</string>
+    <string name="points_bal">Points balance = </string>
+    <string name="add">Add</string>
+    <string name="enrollcard">Add your Rewards card to your account to enjoy exclusive benefits!</string>
+    <string name="pointvalue">(only pts before your next reward)</string>
+    <string name="rewardtxt">You have not used your loyalty card for quite sometime now.
+     Your points will expire in the next 30 days </string>
+    <string name="no_popcorn">What!?\nno popcorn?</string>
+    <string name="special_occasion">Special occasion?\nSay it on big screen</string>
+    <string name="need_ride">NEED A RIDE TO\nTHE MOVIES?</string>
+    <string name="loggedin_with">you are logged in with card 534535435453</string>
+
+    <!-- Cine Greetings -->
+
+    <string name="howmany">How many tickets?</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+
+    <string name="title_activity_movie_detail">MovieDetailActivity</string>
+    <string name="title_forgot_rewardno">Forgot your \nReward number? </string>
+    <string name="email_detail">Enter your Email ID and we\'ll send you the details.  </string>
+    <string name="reward">Reap the rewards \nSign in and let the fun begin</string>
+    <string name="cinegreeting_txt">CINEGREETING</string>
+    <string name="skip">Skip</string>
+    <string name="say_it_on_the_big_screen">Say it on the big screen!</string>
+    <string name="your_cinegreeting_text">Your CineGreeting will play in the pre-show, before the movie starts. Ensure you’re at the cinema 30 minutes before the show time to avoid missing it!</string>
+    <string name="we_ll_showtemplate_txt">We’ll show you a bunch of templates to choose from and personalize in the next step</string>
+    <string name="happy_birthday">Happy Birthday</string>
+    <string name="birthday">Birthday</string>
+    <string name="who_s_wishing">WHO\'S WISHING ?</string>
+    <string name="enter_recipents_name">ENTER RECIPIENT\'S NAME</string>
+    <string name="preview">PREVIEW</string>
+    <string name="events">Events &amp; Promotions</string>
+    <string name="scan">Scan to identify and pay \nat any of our touchpoints</string>
+    <string name="notification">Keep me posted about the latest news and offers</string>
+    <string name="connectfbnote">Connected through Facebook</string>
+    <string name="connectgooglenote">Connected through Google</string>
+    <string name="getrewarded">Get rewarded \nFor the things you love</string>
+    <string name="magical">Magical movie rewards</string>
+
+    <!--LoginScreen-->
+    <string name="hint_email">Email</string>
+    <string name="hint_pass">Password</string>
+    <string name="login">Sign in</string>
+    <string name="forgot_pass">Forgot Password?</string>
+    <string name="new_user">New user ? </string>
+
+    <string name="click">Click here</string>
+    <string name="sign_up"> Sign up</string>
+    <string name="sign_in"> Sign in</string>
+    <string name="preview_onlystr">The seat preview does not reflect real-time seat availability.
+        Close preview to confirm your tickets and continue to select seats.</string>
+    <string name="or">OR</string>
+    <string name="continue_as_a">Or continue as a </string>
+    <string name="guest"> Guest</string>
+    <string name="get_rewarded">Get Rewarded\nFor Loving Movies!</string>
+
+    <string name="signup_underline">
+        <u>Sign up</u>.
+    </string>
+
+    <string name="recommanded">Recommended</string>
+    <string name="popcorn">Popcorn</string>
+    <string name="combo">Combos</string>
+    <string-array name="location">
+        <item>ADDISON CINEMA</item>
+        <item>ILLINOIS</item>
+        <item>IOWA</item>
+        <item>MISSOURI</item>
+        <item>NEBRASKA</item>
+        <item>NORTH DAKOTA</item>
+    </string-array>
+
+    <!-- SeatAlert -->
+    <string name="txt_who_sitting">Who\'s sitting in </string>
+    <string name="adult">Adult</string>
+    <string name="child">Child</string>
+    <string name="senior">Senior</string>
+    <string name="apply_to_all">Apply to all seats</string>
+
+    <!-- Booking Review-->
+    <string name="review_title">Review your booking</string>
+    <string name="ticket">Tickets</string>
+    <string name="booking_summary">Booking summary</string>
+    <string name="fnb">F &amp; B</string>
+    <string name="total">Total</string>
+    <string name="sub_total">Order summary</string>
+
+    <string name="show">Show location within a 25 mile radius</string>
+    <!--MovieDetials-->
+    <string name="cast">CAST &amp; CREW</string>
+    <string name="synopsis">The world\'s top protection agent (Ryan Reynolds) is called upon to guard the life of his mortal
+        enemy, one of the world\'s most notoriaus hitmen (SamuelL K+JAckson). The relentless bodyguard and manipulative assassin have been on the opposite end of the bullet for years and are thrown together for a wildly outrageous 24 hours.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="noshowtimes">No Showtimes Available</string>
+    <string name="finger_print">Input your fingerprint on your mobile to login to the Marcus Theatres app</string>
+    <string name="already">Already a member?</string>
+    <string name="register">Register for Magical Movie Rewards</string>
+    <string name="forgotreward">Forgot Your Rewards Number?</string>
+    <string name="congrats">Congratulations Your Registration \nwas Successful</string>
+    <!-- <string name="join">REGISTER YOUR PROFILE</string>-->
+    <string name="join">Join and get awesome offers!</string>
+    <string name="reg">Register your profile</string>
+
+    <string name="forgot">Enter the email address that you used to register. We\'ll send you an email with a link to reset your password.</string>
+    <string name="success">Congratulations!Your registration was Successful.</string>
+    <string name="password_reset">We have sent a password reset \nlink to your mail</string>
+    <string name="max_seats_alreadyselected">You have selected the maximum number of tickets for this booking.</string>
+    <string name="share_txt">Hey, I am sharing these movie with you via the Marcus Theatres App. Click the link to let the fun begin."</string>
+    <string name="not_valid_location">We are unable to find any theatres around your location. Please set your location manually.</string>
+    <string name="whatsplaying">What\'s Playing nearby?</string>
+    <string name="caution">Caution</string>
+    <string name="agree">agree</string>
+    <string name="go_back">Go back</string>
+    <string name="copyright">© 2018 The Marcus Corporation. All Rights Reserved</string>
+    <string name="language_preferences">Language Preferences</string>
+    <string name="my_preferred_genre">My Preferred Genres</string>
+    <string name="choose">Choose your Specials &amp; Promotions</string>
+    <string name="genre">Genre</string>
+    <string name="language">Language</string>
+    <string name="theatres_name">Preferred Theatres</string>
+    <string name="save">Save card for faster checkouts</string>
+    <string name="tryagain">Try Again</string>
+    <string name="nointernet">You seem to be offline. Please check your internet connection.</string>
+    <string name="termscondn">I accept </string>
+    <string name="search_by_fulladdress">Search by Zip Code / City / Address /Theatre</string>
+    <string name="chooselocmanually">Choose your location manually</string>
+    <string name="autodetectlocation">Detecy my location</string>
+    <string name="title_activity_theatre_maps">Map</string>
+    <string name="ohinternalservererror">Internal Server Error! Please try again after some time.</string>
+    <string name="enter_cinema">Enter cinema</string>
+    <string name="history">History</string>
+    <string name="coming_up">Coming up</string>
+    <string name="edit_preferences">Modify</string>
+    <string name="in_your_account">in your account</string>
+    <string name="mmr_signup_success">Registration successful! Welcome to the world of Magical Movie Rewards!</string>
+    <string name="view_your_booking_history">View your booking history</string>
+    <string name="gift_card">Gift Cards</string>
+    <string name="enroll_gift_card">Enjoy discounts and offers at Marcus Theatres!</string>
+    <string name="gift_desc">When you are ready to order,your gift is just a few clicks away!</string>
+    <string name="no_offers_available">No Offers Available</string>
+    <string name="no_movies_found">No Movies Found</string>
+    <string name="preferred_cinemas">Preferred Locations</string>
+    <string name="location_txt">Locations</string>
+    <string name="add_card">Add Your Card</string>
+    <string name="enroll_your_card">ADD YOUR CARD</string>
+    <string name="enter_your_card_number">Enter your card number</string>
+    <string name="email_or_last_name">Email or Last name</string>
+    <string name="enroll_your_gift_card">Add Existing Gift Card</string>
+    <string name="enter_your_gift_card_number">Enter your gift card number</string>
+    <string name="pin">Pin</string>
+    <string name="add_gift_card">Add Gift Card</string>
+    <string name="enter_email">ENTER EMAIL</string>
+    <string name="avengers_infinity_war">AVENGERS : INFINITY WAR</string>
+    <string name="choose_your_snacks">CHOOSE YOUR SNACKS</string>
+    <string name="forgot_password">FORGOT PASSWORD</string>
+    <string name="send_request">SEND REQUEST</string>
+    <string name="add_a_short_message">ADD A SHORT MESSAGE</string>
+    <string name="next">Next</string>
+    <string name="sign_in_as_a_guest">SIGN IN AS A GUEST</string>
+    <string name="first_name">FIRST NAME</string>
+    <string name="last_name">LAST NAME</string>
+    <string name="email">EMAIL</string>
+    <string name="mobile_number">MOBILE NUMBER</string>
+    <string name="proceed">Proceed</string>
+    <string name="find_now">Find Now</string>
+    <string name="no_thanks">No Thanks</string>
+    <string name="magical_moview_rewards_member">Magical Moview Rewards member</string>
+    <string name="click_here">click here</string>
+    <string name="not_a_member">Not a member?</string>
+    <string name="join_now">Join now!</string>
+    <string name="password">PASSWORD</string>
+    <string name="gender">GENDER</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="others">Others</string>
+    <string name="mm_dd_yy">MM/DD/YYYY</string>
+    <string name="address">ADDRESS</string>
+    <string name="state">STATE</string>
+    <string name="city">CITY</string>
+    <string name="zip_code">ZIP CODE</string>
+    <string name="signup">Sign Up</string>
+    <string name="continue_">Continue</string>
+    <string name="filter">FILTER</string>
+    <string name="reset">RESET</string>
+    <string name="save_changes">SAVE CHANGES</string>
+    <string name="search_by_movie">Search by Movie</string>
+    <string name="no_data_found">NO DATA FOUND</string>
+    <string name="movie_rewards">MOVIE REWARDS</string>
+    <string name="theatres_you_like">Theatres You Like</string>
+    <string name="credit_debit_card">Credit/Debit card</string>
+    <string name="magical_movie_rewards">Magical Movie Rewards</string>
+    <string name="my_account">My Account</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="phone_no">PHONE NO</string>
+    <string name="dob">DOB</string>
+    <string name="edit_password">Edit Password</string>
+    <string name="connected_account">Connected Account</string>
+    <string name="unlink_account">Unlink account</string>
+    <string name="search_for_theatres_city_state">Search for Theatres, City, State</string>
+    <string name="near_you">Near You</string>
+    <string name="payment">PAYMENT</string>
+    <string name="set_your_favorite">Select Your Favorites</string>
+    <string name="qrlogin">QRLOGIN</string>
+    <string name="your_transactions">YOUR TRANSACTIONS</string>
+    <string name="rewards">Rewards</string>
+    <string name="no_rewards_found">NO REWARDS FOUND</string>
+    <string name="no_points_found">NO POINTS FOUND</string>
+    <string name="from">FROM</string>
+    <string name="to">TO</string>
+    <string name="points_earned">Points Earned</string>
+    <string name="theatre">Theatre</string>
+    <string name="transaction">Transaction</string>
+    <string name="amount">Amount</string>
+    <string name="terms_and_conditions">Terms &amp; Conditions </string>
+    <string name="rewards_card_number">REWARDS CARD NUMBER</string>
+    <string name="email_last_name">EMAIL/LAST NAME</string>
+    <string name="selected_seat">SELECTED SEAT</string>
+    <string name="occupied_seat">OCCUPIED SEAT</string>
+    <string name="available">AVAILABLE</string>
+    <string name="wheelchair">WHEEL CHAIR</string>
+    <string name="companion">COMPANION</string>
+    <string name="cast_and_crew">Cast And Crew</string>
+    <string name="director">Director</string>
+    <string name="buy_tickets">Buy Tickets</string>
+    <string name="no_showtimes_available">No Showtimes Available</string>
+    <string name="view_more">Load More</string>
+    <string name="specials">Specials</string>
+    <string name="screen_1">SCREEN 1</string>
+    <string name="close">Close</string>
+    <string name="payment_status">Payment Status</string>
+    <string name="accept">Accept</string>
+    <string name="reason">Reason</string>
+    <string name="voucher_no_for_redemption">Voucher No for Redemption</string>
+    <string name="redeem_amount">Redeem Amount</string>
+    <string name="voucher_expired_on">Voucher Expired on</string>
+    <string name="redeem">REDEEM</string>
+
+    <string name="scan_to_identify_and_pay_nat_any_of_our_touch_points">Scan to identify and pay  at any of our touch points</string>
+    <string name="other_charges">OTHER CHARGES</string>
+    <string name="resend_ticket">Resend Ticket</string>
+    <string name="reschedule_cancel">Reschedule/Cancel</string>
+    <string name="more_info">MORE INFO</string>
+    <string name="delete">Delete</string>
+    <string name="cvv">CVV</string>
+    <string name="zipcode">ZIPCODE</string>
+    <string name="child_3_to_11">Child 3 to 11</string>
+    <string name="booking_successful">Booking Successful!</string>
+    <string name="booking_failure">Booking Failure!</string>
+    <string name="selected_seats">SELECTED SEATS</string>
+    <string name="screen">SCREEN</string>
+    <string name="only_points">POINTS</string>
+    <string name="pointsearned">PointsEarned</string>
+    <string name="our_theatres">Our Theatres</string>
+    <string name="choose_your_location">Choose Your Location</string>
+    <string name="preview_only">PREVIEW ONLY</string>
+    <string name="occupied">OCCUPIED</string>
+    <string name="wheel_chair">WHEEL CHAIR</string>
+    <string name="x_close">X CLOSE</string>
+    <string name="mm_dd_yyyy">MM/DD/YYYY</string>
+    <string name="rewards_charges">REWARDS CHARGES</string>
+    <string name="gift_card_charges">GIFT CARD CHARGES</string>
+    <string name="expire_date">EXPIRE DATE</string>
+    <string name="avs">AVS</string>
+    <string name="movies">Movies</string>
+    <string name="theatres">Theatres</string>
+    <string name="profile">Profile</string>
+    <string name="experience">Experience</string>
+    <string name="more">More…</string>
+    <string name="about_us">About Us</string>
+    <string name="faq">FAQs</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="find_your_favorite_movie">FIND YOUR FAVORITE MOVIE</string>
+    <string name="action_comedy">ACTION, COMEDY</string>
+    <string name="r">R</string>
+    <string name="_23_apr_2018">23 Apr 2018</string>
+    <string name="_1_hrs_54_mins">1 HRS 54 MINS</string>
+    <string name="samuel_jackson">SAMUEL JACKSON</string>
+    <string name="actor">Actor</string>
+    <string name="ryon_reynolds">RYON REYNOLDS</string>
+    <string name="patrick_hughes">PATRICK HUGHES</string>
+    <string name="book_now">Book Now</string>
+    <string name="my_genre">My Genre</string>
+    <string name="my_language">My Language</string>
+    <string name="no_location_found">No Location Found</string>
+    <string name="find_me">Find Me</string>
+    <string name="show_location_within_a">Show locations within a </string>
+    <string name="_50_mile">50 mile</string>
+    <string name="radius"> radius</string>
+    <string name="_100mile">100mile</string>
+    <string name="enter_city_name">Enter City Name</string>
+    <string name="search_by_theatres">Search by Theatres</string>
+    <string name="you_have">You have</string>
+    <string name="i_accept">I accept </string>
+    <string name="we_accept">We accept </string>
+    <string name="i_agree">I agree to the </string>
+    <string name="_0_0">$0.00</string>
+    <string name="payment_breakup">Payment Breakup</string>
+    <string name="reward_payment">Reward payment</string>
+    <string name="gift_card_payment">Gift card payment</string>
+    <string name="preferences">Preferences</string>
+    <string name="_50_bonus_points">50 BONUS POINTS</string>
+    <string name="card_number">Card number</string>
+    <string name="location">Location</string>
+    <string name="enroll_reward_description">Enjoy discounts and offers at Marcus Theatres!</string>
+    <string name="giftcards">Gift Cards</string>
+    <string name="booking_history">Booking History</string>
+    <string name="coupleseat">COUPLE SEAT</string>
+    <string name="skip_txt">Skip</string>
+    <string name="remove_saved_card_warning">Are you sure you want to remove this Saved Card</string>
+    <string name="no_saved_cards">You have no more saved cards, Please select other payment method.</string>
+    <string name="welcome_take_fewmoments">Welcome - Please take a few moments to set up your preferences</string>
+    <string name="select_manual">Select Theatres Manually</string>
+    <string name="findatheatre">Find a Theatre Near You</string>
+    <string name="age_minimum_12">You must be 13 years of age or above to register</string>
+    <string name="marcus_theatres">Marcus Theatres</string>
+    <string name="select_previous_date">Please select previous date</string>
+    <string name="fetching_balance">Fetching Balance</string>
+    <string name="manual">Manual</string>
+    <string name="select_payment_method">Please select a payment method</string>
+    <string name="marcus_theatre_title">Marcus Theatres</string>
+    <string name="cardtype_not_allowed">This card type is not allowed</string>
+    <string name="accept_terms_condition">Please accept Terms and Conditions</string>
+    <string name="sure_leave_the_page">Are you sure you want to leave this page ?</string>
+    <string name="no_showtime_available">No Showtimes Available</string>
+    <string name="image_failed_register_success">Image load failed, Registeration Successfull</string>
+
+</resources>

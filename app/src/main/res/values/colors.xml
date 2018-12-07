@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <color name="marcus_red">#cf102d</color>
+    <color name="red">#990000</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">@color/marcus_red</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="yellow">#FEFCDD</color>
+    <color name="greyy">#252525</color>
+    <color name="textgrey">#9b9b9b</color>
+    <color name="subtextgrey">#757575</color>
+    <color name="lightblack">#212121</color>
+    <color name="blur_grey">#CACACA</color>
+    <color name="grey_trans">#d8282828</color>
+    <color name="welcome">#adadad</color>
+    <color name="fb_filled">#393939</color>
+    <color name="grey">#212121</color>
+    <color name="darkgrey">#434343</color>
+    <color name="name_grey">#C0C0C0</color>
+    <color name="new_grey">#9A9A9A</color>
+    <color name="text_grey">#434343</color>
+    <color name="white_seat">#fcfcfc</color>
+    <color name="alert_bg_grey">#FF151515</color>
+    <color name="grey_light">#5E5E5E</color>
+    <color name="grey_xlight">#6e6e6e</color>
+    <color name="white_light">#e1e1e1</color>
+    <color name="view_line_color">#e1e1e1</color>
+    <array name="rect_color">
+        <item>@color/marcus_red</item>
+        <item>@color/marcus_red</item>
+        <item>@color/marcus_red</item>
+        <item>@color/marcus_red</item>
+        <item>@color/marcus_red</item>
+    </array>
+</resources>

@@ -1,0 +1,24 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/movies_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:nestedScrollingEnabled="false" />
+
+    <TextView
+        android:id="@+id/tvNoMovies"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:fontFamily="@font/gotham_bold"
+        android:gravity="center"
+        android:text="@string/no_movies_found"
+        android:textColor="@color/marcus_red"
+        android:visibility="gone" />
+
+</RelativeLayout>

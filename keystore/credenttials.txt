@@ -1,0 +1,2 @@
+alias :  ncrcinema
+password : P@ss4Mob!l3

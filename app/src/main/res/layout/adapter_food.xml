@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_5sdp">
+
+    <ImageView
+        android:id="@+id/ivFood"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_130sdp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher" />
+
+    <ImageView
+        android:id="@+id/tvRating"
+        android:layout_width="@dimen/_16sdp"
+        android:layout_height="@dimen/_16sdp"
+        android:layout_margin="@dimen/_7sdp"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/tvCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/laycount"
+        android:background="@color/marcus_red"
+        android:fontFamily="@font/gothambold"
+        android:padding="@dimen/_6sdp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15sdp" />
+
+    <RelativeLayout
+        android:id="@+id/laycount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivFood"
+        android:background="@color/black">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/gothambold"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tvPlus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:fontFamily="@font/gothambold"
+            android:padding="@dimen/_5sdp"
+            android:text="+"
+            android:textColor="@color/marcus_red"
+            android:textSize="@dimen/_25sdp" />
+
+        <TextView
+            android:id="@+id/tvCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@+id/tvPlus"
+            android:fontFamily="@font/gothambold"
+            android:gravity="center"
+            android:minWidth="@dimen/_40sdp"
+            android:padding="@dimen/_5sdp"
+            android:text="+"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_18sdp" />
+
+        <TextView
+            android:id="@+id/tvMinus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/tvCount"
+            android:fontFamily="@font/gothambold"
+            android:padding="@dimen/_5sdp"
+            android:text="-"
+            android:textColor="@color/marcus_red"
+            android:textSize="@dimen/_25sdp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

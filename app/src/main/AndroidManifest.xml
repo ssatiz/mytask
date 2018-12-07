@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.influx.marcus.theatres">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+
+    <permission
+        android:name="com.influx.marcus.theatres.permission.CAMERA"
+        android:protectionLevel="signature" />
+
+    <application
+        android:name=".MarcusApp"
+        android:allowBackup="false"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/app_icon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/app_icon_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:allowBackup">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="a2b0924221711741788e19a3aac8372c6a0cfe2f" />
+
+        <provider
+            android:name=".utils.GenericFileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".login.LoginScreen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".login.QRLoginnew"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <service android:name=".firebase.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <service android:name=".firebase.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <service android:name=".utils.FetchHomeService" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/logo" />
+        <!-- ./Firebase Notifications -->
+
+
+        <!--
+        <activity
+            android:name=".payment.PaymentScreen"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="Pay" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        -->
+        <meta-data
+            android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:value="barcode" />
+
+        <activity
+            android:name=".findlocation.LocationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".cinegreetings.Cinegreeting"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".splash.SplashScreen"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".seatlayout.SeatLayoutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".cinegreetings.GreetingCustomActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".bookingconfirmation.BookingConfirmation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".homepage.MovieDetailActivity"
+            android:label="@string/title_activity_movie_detail"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".foodbeverage.FoodFeverage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".bookingreview.BookingReview"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".homepage.HomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".myaccount.EnrollCard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".myaccount.EnrollGiftCard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".cinegreetings.CineGreetLandscape"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".cinegreetings.GreetingCustomActivitynew"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".preferences.PreferenceActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".movielisting.MovieListingActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".showtime.ShowtimeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".guestcheckout.Guest"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".signup.SignUp"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".forgotpassword.PasswordResetSuccess"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".forgotpassword.ForgotPasswordScreen"
+            android:screenOrientation="portrait" />
+        <activity android:name=".login.RewardLogin" />
+        <activity
+            android:name=".login.EnterEmailScreen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".myaccount.MyAccountScreen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".customCamera.TempActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".signup.RegisterSuccess"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.PaymentScreen"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".myaccount.bookinghistory.RewardDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".signup.MagicalSignup"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".unreservedbooking.UnreservedBooking"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".myaccount.bookinghistory.BookingHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".payment.TermsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".specials.SpecialsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".specials.FilterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".specials.SpecialWebActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".theatres.OurTheatres"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".theatres.TheatreMapsActivity"
+            android:label="@string/title_activity_theatre_maps"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".theatres.OurTheatres" />
+        </activity>
+        <activity
+            android:name=".theatres.TheatreShowTimeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".moviefilter.MovieFilterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".homepage.AboutusActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".homepage.FaqActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".homepage.TermsandConditions"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".homepage.PrivacyPolicy"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".homepage.ContactusActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".homepage.MovieRewardsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".test.TestPay"
+            android:screenOrientation="portrait" />
+        <activity android:name=".splash.MaintananceActivity" />
+        <activity android:name=".utils.NoInternetActivity"></activity>
+    </application>
+
+</manifest>
